@@ -28,8 +28,6 @@ p { margin: 0 0 1rem; }
 
 footer { margin-top: 3rem; color: #777; font-size: 0.9rem; }
 
-/* Placeholders still to be filled in. Delete this rule once none remain. */
-.todo { background: #fff3a3; }
 
 @media (max-width: 600px) {
   body { margin: 1.5rem auto; }
