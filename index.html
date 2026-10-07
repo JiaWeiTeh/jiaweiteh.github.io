@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jia Wei Teh</title>
-  <meta name="description" content="Jia Wei Teh — astrophysicist working on stellar feedback and the evolution of feedback-driven bubbles in molecular clouds. Author of the TRINITY code.">
+  <meta name="description" content="Jia Wei Teh — PhD candidate in astrophysics at Universität Heidelberg, working on stellar feedback and the evolution of bubbles in molecular clouds. Lead developer of the TRINITY code.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,13 +13,17 @@
   <img src="photo.jpg" alt="Jia Wei Teh" width="140" height="140">
   <div>
     <h1>Jia Wei Teh</h1>
-    <p class="subtitle"><span class="todo">PhD candidate in astrophysics, [Institute], [University]</span></p>
+    <p class="subtitle">
+      PhD candidate in astrophysics<br>
+      Institut für Theoretische Astrophysik, Universität Heidelberg<br>
+      jiaweiteh.astro (at) gmail.com
+    </p>
     <p class="links">
-      <a class="todo" href="mailto:[email]">Email</a> ·
+      <a href="cv.pdf">CV (PDF)</a> ·
       <a href="https://github.com/JiaWeiTeh">GitHub</a> ·
-      <a class="todo" href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Teh%2C%20J.%20W.%22&amp;sort=date%20desc">ADS</a> ·
-      <a class="todo" href="https://orcid.org/[orcid]">ORCID</a> ·
-      <a class="todo" href="cv.pdf">CV (PDF)</a>
+      <a href="https://www.linkedin.com/in/jiaweiteh">LinkedIn</a> ·
+      <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Teh%2C%20J.%20W.%22&amp;sort=date%20desc">ADS</a> ·
+      <a class="todo" href="https://orcid.org/[orcid]">ORCID</a>
     </p>
   </div>
 </header>
@@ -35,16 +39,22 @@
 <section id="about">
   <h2>About</h2>
   <p>
-    I am a <span class="todo">PhD candidate in astrophysics at [Institute], [University],
-    supervised by [Supervisor]</span>. I study how feedback from young massive star clusters
-    — stellar winds, radiation and supernovae — shapes the molecular clouds that form them,
-    and how far that feedback can carry before it stalls. I develop
-    <a href="https://github.com/JiaWeiTeh/trinity">TRINITY</a>, a semi-analytic code that
-    follows a feedback-driven bubble through its evolutionary phases to its stopping fate.
+    I am a PhD candidate at the Institut für Theoretische Astrophysik, Universität Heidelberg,
+    within the International Max Planck Research School for Astronomy and Cosmic Physics,
+    supervised by Ralf Klessen, Simon Glover and Kathryn Kreckel. I expect to defend in
+    spring 2027 and am currently applying for postdoctoral positions.
   </p>
-  <p class="todo">
-    I expect to complete my PhD in [month year] and am looking for postdoctoral positions
-    starting [year].
+  <p>
+    I study stellar feedback and the evolution of interstellar bubbles in giant molecular
+    clouds. I am the lead developer of <a href="https://github.com/JiaWeiTeh/trinity">TRINITY</a>,
+    a one-dimensional thin-shell feedback code, and apply it to resolved surveys of nearby
+    galaxies and Galactic star-forming regions (PHANGS, SDSS-V Local Volume Mapper, JWST).
+    I am a member of the PHANGS and SDSS-V/LVM collaborations and the ECOGAL ERC Synergy
+    consortium.
+  </p>
+  <p>
+    Before Heidelberg I completed a BSc (Advanced) (Honours) in Astronomy &amp; Astrophysics
+    at the Australian National University, graduating with First Class Honours.
   </p>
 </section>
 
@@ -53,73 +63,141 @@
 
   <h3>Feedback-driven bubbles in molecular clouds</h3>
   <p>
-    For a given giant molecular cloud mass, star-formation efficiency, density profile and
-    ambient medium, TRINITY integrates the expansion of the feedback bubble — shell radius,
-    velocity, thermal state and force budget — through its energy- and momentum-driven phases,
-    and resolves whether the shell escapes the cloud, stalls, or recollapses.
-    <span class="todo">[One or two sentences on the main scientific result of the method paper.]</span>
+    Molecular clouds in nearby galaxies are cleared within a few million years of forming
+    their first massive stars, before any of those stars explode as supernovae. TRINITY
+    follows the pre-supernova feedback channels together — stellar winds, direct and
+    dust-reprocessed radiation pressure, and the pressure of photoionised gas — by
+    integrating the equation of motion of a single swept-up shell from the first winds to
+    the shell's fate: dispersal of the cloud, or stalling and re-collapse. It succeeds
+    WARPFIELD, keeping that code's speed while adding photoionised-gas pressure as an
+    explicit driver and a choice of cloud density profile. Paper I presents the model and
+    its validation; Paper II, in preparation, surveys cloud mass, density, star-formation
+    efficiency and metallicity.
   </p>
 
-  <h3 class="todo">The Rosette Nebula [working title]</h3>
-  <p class="todo">
-    [One paragraph on the Rosette work: what observations you compare against, what the model
-    predicts, and what it tells us about the cluster's feedback history.]
+  <h3>Confronting the model with resolved observations</h3>
+  <p>
+    The model predicts quantities that can be compared directly with data: the shell's size
+    and velocity, the balance of forces driving it, and the fraction of ionising photons that
+    escape. I am using SDSS-V Local Volume Mapper integral-field spectroscopy of the Rosette
+    Nebula to test the feedback history of its central cluster, and I contribute TRINITY
+    models to studies of the young bubble in the central starburst of NGC&nbsp;253 with JWST
+    and of neutral atomic hydrogen around the Orion nebula.
   </p>
 
-  <h3 class="todo">[Third topic, if any]</h3>
-  <p class="todo">
-    [One paragraph. Delete this block if two topics are enough.]
+  <h3>Escape of ionising photons from H&nbsp;II regions</h3>
+  <p>
+    My earlier work combined LEGUS star-cluster catalogues with SIGNALS H&nbsp;II-region
+    spectroscopy of NGC&nbsp;628 to constrain the fraction of Lyman-continuum photons that
+    escape individual H&nbsp;II regions, a thread continued in the PHANGS study of the
+    stellar associations powering H&nbsp;II regions.
   </p>
 </section>
 
 <section id="publications">
   <h2>Publications</h2>
   <p>
-    Full list on <a class="todo" href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Teh%2C%20J.%20W.%22&amp;sort=date%20desc">ADS</a>.
+    Full list on <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Teh%2C%20J.%20W.%22&amp;sort=date%20desc">ADS</a>.
   </p>
 
   <h3>First author</h3>
   <ol class="pubs" reversed>
-    <li class="todo">
-      <strong>Teh, J. W.</strong>, [co-authors] (in prep.),
-      <em>[Rosette paper title]</em>.
+    <li>
+      <strong>Teh, J. W.</strong>, Klessen, R. S., Glover, S. C. O., Kreckel, K. (2026),
+      <em>TRINITY: A coupled model of winds, radiation, and photoionised gas in molecular
+      clouds. I. Methods and validation</em>, Astronomy &amp; Astrophysics, in press.
+      <a href="https://doi.org/10.1051/0004-6361/202661074">DOI</a> ·
+      <a href="https://arxiv.org/abs/2605.27517">arXiv:2605.27517</a> ·
+      <a href="https://ui.adsabs.harvard.edu/abs/arXiv:2605.27517/abstract">ADS</a>
     </li>
     <li>
-      <strong>Teh, J. W.</strong>, <span class="todo">[co-authors]</span> (2026),
-      <em class="todo">[TRINITY method paper title]</em>,
-      <span class="todo">[journal, submitted / accepted]</span>,
-      <a href="https://arxiv.org/abs/2605.27517">arXiv:2605.27517</a> ·
-      <a href="https://ui.adsabs.harvard.edu/abs/2026arXiv260527517T/abstract">ADS</a>.
+      <strong>Teh, J. W.</strong>, Grasha, K., Krumholz, M. R., Battisti, A. J., Calzetti, D.,
+      Rousseau-Nepton, L., et al. (2023),
+      <em>Constraining the LyC escape fraction from LEGUS star clusters with SIGNALS H&nbsp;II
+      region observations: A pilot study of NGC&nbsp;628</em>, MNRAS, 524, 1191.
+      <a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.524.1191T/abstract">ADS</a>
     </li>
   </ol>
 
   <h3>Co-author</h3>
   <ol class="pubs" reversed>
-    <li class="todo">
-      [Author list] (year), <em>[title]</em>, [journal], [arXiv / ADS link].
+    <li>
+      Sheriff, K. E., Mills, E. A. C., Mai, X., Siwakoti, U., Duval, S. E., Bolatto, A. D.,
+      Levy, R. C., <strong>Teh, J. W.</strong>, et al. (2026),
+      <em>JWST Observations of Starbursts: A Young Bubble in NGC&nbsp;253's Central
+      Starburst</em>, submitted.
+      <a href="https://ui.adsabs.harvard.edu/abs/arXiv:2609.16190/abstract">ADS</a>
+    </li>
+    <li>
+      Soler, J. D., Beuther, H., Glover, S. C. O., Klessen, R. S., Ott, J., Rugel, M.,
+      <strong>Teh, J. W.</strong>, et al. (2026),
+      <em>The Neutral Atomic Hydrogen in the solar neighbourhood (NeAtHood) project: I. Ghost
+      in the shell: neutral atomic hydrogen in the extended Orion nebula</em>,
+      A&amp;A, 711, A85.
+      <a href="https://ui.adsabs.harvard.edu/abs/2026A%26A...711A..85S/abstract">ADS</a>
+    </li>
+    <li>
+      Scheuermann, F., Kreckel, K., <strong>Teh, J. W.</strong>, Belfiore, F., Groves, B.,
+      Barnes, A. T., et al. (2026),
+      <em>Stellar associations powering H&nbsp;II regions: II. Escape fraction of ionising
+      photons</em>, A&amp;A, 708, A202.
+      <a href="https://ui.adsabs.harvard.edu/abs/2026A%26A...708A.202S/abstract">ADS</a>
+    </li>
+    <li>
+      Polak, B., Mac Low, M.-M., Klessen, R. S., <strong>Teh, J. W.</strong>,
+      Cournoyer-Cloutier, C., Andersson, E. P., Appel, S. M., et al. (2024),
+      <em>Massive star cluster formation: I. High star formation efficiency while resolving
+      feedback of individual stars</em>, A&amp;A, 690, A94.
+      <a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...690A..94P/abstract">ADS</a>
+    </li>
+    <li>
+      Maconi, E., Soler, J. D., Reissl, S., Girichidis, P., Klessen, R. S., Hennebelle, P.,
+      Molinari, S., Testi, L., Smith, R. J., Sormani, M. C., <strong>Teh, J. W.</strong> (2023),
+      <em>Modelling Local Bubble analogs: synthetic dust polarization maps</em>,
+      MNRAS, 523, 5995.
+      <a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.523.5995M/abstract">ADS</a>
     </li>
   </ol>
+
+  <h3>In preparation</h3>
+  <ul class="pubs">
+    <li>
+      <strong>Teh, J. W.</strong> and the LVM collaboration,
+      <em>Stellar feedback in the Rosette Nebula</em>.
+    </li>
+    <li>
+      <strong>Teh, J. W.</strong>, Klessen, R. S., Glover, S. C. O., Kreckel, K.,
+      <em>TRINITY II: a parameter survey of giant molecular cloud evolution under stellar
+      feedback</em>.
+    </li>
+    <li>
+      Guevara, C., Kabanovic, S., Schneider, N., Dannhauer, S., García, P., Simon, R.,
+      Kreckel, K., Ossenkopf-Okada, V., <strong>Teh, J. W.</strong>,
+      <em>The SOFIA bubble project</em>.
+    </li>
+  </ul>
 </section>
 
 <section id="software">
   <h2>Software</h2>
   <p>
-    <strong>TRINITY</strong> — a feedback-driven bubble-evolution code. Given a cloud mass,
-    star-formation efficiency, density profile and ambient medium, it integrates the shell's
-    radius, velocity, thermal state and force budget through its phase transitions and
-    stopping fate. Pure Python, GPL v3.
+    <strong>TRINITY</strong> — a one-dimensional thin-shell code for the feedback-driven
+    expansion of bubbles in molecular clouds. Given a cloud's mass, density profile,
+    star-formation efficiency and surroundings, it integrates the shell's radius, velocity,
+    thermal state and force budget through its phase transitions to its stopping fate.
+    Pure Python, GPL v3.
     <a href="https://github.com/JiaWeiTeh/trinity">Source code</a> ·
-    <a href="https://jiaweiteh.github.io/trinity-web/">Documentation</a>.
+    <a href="https://jiaweiteh.github.io/trinity-web/">Documentation</a>
   </p>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
-  <p class="todo">
-    [email]<br>
-    [Institute]<br>
-    [Street address]<br>
-    [City, Country]
+  <p>
+    jiaweiteh.astro (at) gmail.com<br>
+    Institut für Theoretische Astrophysik, Zentrum für Astronomie<br>
+    Universität Heidelberg<br>
+    Albert-Ueberle-Straße 2, 69120 Heidelberg, Germany
   </p>
 </section>
 
