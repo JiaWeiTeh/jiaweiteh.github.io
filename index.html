@@ -1,185 +1,191 @@
-<!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Solid State by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jia Wei Teh</title>
+  <meta name="description" content="Jia Wei Teh — PhD candidate in astrophysics at Universität Heidelberg, working on stellar feedback and the evolution of bubbles in molecular clouds. Lead developer of the TRINITY code.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<header>
+  <img src="photo.jpg" alt="Jia Wei Teh" width="140" height="140">
+  <div>
+    <h1>Jia Wei Teh</h1>
+    <p class="subtitle">
+      PhD candidate in astrophysics<br>
+      Institut für Theoretische Astrophysik, Universität Heidelberg<br>
+      jiaweiteh.astro (at) gmail.com
+    </p>
+    <p class="links">
+      <a href="cv.pdf">CV (PDF)</a> ·
+      <a href="https://github.com/JiaWeiTeh">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/jiaweiteh">LinkedIn</a> ·
+      <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0001-7863-5047&amp;sort=date%20desc">ADS</a> ·
+      <a href="https://orcid.org/0000-0001-7863-5047">ORCID</a>
+    </p>
+  </div>
+</header>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Solid State</a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+<nav>
+  <a href="#about">About</a>
+  <a href="#research">Research</a>
+  <a href="#publications">Publications</a>
+  <a href="#software">Software</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="generic.html">Curriculum Vitae</a></li>
-								<li><a href="elements.html">Elements</a></li>
-								<!--
-								<li><a href="#">Log In</a></li>
-								<li><a href="#">Sign Up</a></li> 
-								-->
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
-					</nav>
+<section id="about">
+  <h2>About</h2>
+  <p>
+    I am a PhD candidate at the Institut für Theoretische Astrophysik, Universität Heidelberg,
+    within the International Max Planck Research School for Astronomy and Cosmic Physics,
+    supervised by Ralf Klessen, Simon Glover and Kathryn Kreckel.
+  </p>
+  <p>
+    I study stellar feedback and the evolution of interstellar bubbles in giant molecular
+    clouds. I am the lead developer of <a href="https://github.com/JiaWeiTeh/trinity">TRINITY</a>,
+    a one-dimensional thin-shell feedback code, and apply it to resolved surveys of nearby
+    galaxies and Galactic star-forming regions (PHANGS, SDSS-V Local Volume Mapper, JWST).
+    I am a member of the PHANGS and SDSS-V/LVM collaborations and the ECOGAL ERC Synergy
+    consortium.
+  </p>
+  <p>
+    Before Heidelberg I studied astronomy and astrophysics at the Australian National
+    University.
+  </p>
+</section>
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="logo"><span class="icon fa-gem"></span></div>
-							<h2>Jia Wei Teh</h2>
-							<p>Another free + fully responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
-						</div>
-					</section>
+<section id="research">
+  <h2>Research</h2>
 
-				<!-- Wrapper -->
-					<section id="wrapper">
+  <h3>Feedback-driven bubbles in molecular clouds</h3>
+  <p>
+    Molecular clouds in nearby galaxies are cleared within a few million years of forming
+    their first massive stars, before any of those stars explode as supernovae. TRINITY
+    follows the pre-supernova feedback channels together — stellar winds, direct and
+    dust-reprocessed radiation pressure, and the pressure of photoionised gas — by
+    integrating the equation of motion of a single swept-up shell from the first winds to
+    the shell's fate: dispersal of the cloud, or stalling and re-collapse. It succeeds
+    WARPFIELD, keeping that code's speed while adding photoionised-gas pressure as an
+    explicit driver and a choice of cloud density profile. Paper I presents the model and
+    its validation; I am now using it to survey cloud mass, density, star-formation
+    efficiency and metallicity.
+  </p>
 
-						<!-- One -->
-							<section id="one" class="wrapper spotlight style1">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Magna arcu feugiat</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
-									</div>
-								</div>
-							</section>
+  <h3>Confronting the model with resolved observations</h3>
+  <p>
+    The model predicts quantities that can be compared directly with data: the shell's size
+    and velocity, the balance of forces driving it, and the fraction of ionising photons that
+    escape. I am using SDSS-V Local Volume Mapper integral-field spectroscopy of the Rosette
+    Nebula to test the feedback history of its central cluster, and I contribute TRINITY
+    models to studies of the young bubble in the central starburst of NGC&nbsp;253 with JWST
+    and of neutral atomic hydrogen around the Orion nebula.
+  </p>
 
-						<!-- Two -->
-							<section id="two" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Tempus adipiscing</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
-									</div>
-								</div>
-							</section>
+  <h3>Escape of ionising photons from H&nbsp;II regions</h3>
+  <p>
+    My earlier work combined LEGUS star-cluster catalogues with SIGNALS H&nbsp;II-region
+    spectroscopy of NGC&nbsp;628 to constrain the fraction of Lyman-continuum photons that
+    escape individual H&nbsp;II regions, a thread continued in the PHANGS study of the
+    stellar associations powering H&nbsp;II regions.
+  </p>
+</section>
 
-						<!-- Three -->
-							<section id="three" class="wrapper spotlight style3">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Nullam dignissim</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
-									</div>
-								</div>
-							</section>
+<section id="publications">
+  <h2>Publications</h2>
+  <p>
+    Full list on <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0001-7863-5047&amp;sort=date%20desc">ADS</a>.
+  </p>
 
-						<!-- Four -->
-							<section id="four" class="wrapper alt style1">
-								<div class="inner">
-									<h2 class="major">Vitae phasellus</h2>
-									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3 class="major">Sed feugiat lorem</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Nisl placerat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-											<h3 class="major">Ante fermentum</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<h3 class="major">Fusce consequat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-									</section>
-									<ul class="actions">
-										<li><a href="#" class="button">Browse All</a></li>
-									</ul>
-								</div>
-							</section>
+  <h3>First author</h3>
+  <ol class="pubs" reversed>
+    <li>
+      <strong>Teh, J. W.</strong>, Klessen, R. S., Glover, S. C. O., Kreckel, K. (2026),
+      <em>TRINITY: A coupled model of winds, radiation, and photoionised gas in molecular
+      clouds. I. Methods and validation</em>, Astronomy &amp; Astrophysics, in press.
+      <a href="https://doi.org/10.1051/0004-6361/202661074">DOI</a> ·
+      <a href="https://arxiv.org/abs/2605.27517">arXiv:2605.27517</a> ·
+      <a href="https://ui.adsabs.harvard.edu/abs/arXiv:2605.27517/abstract">ADS</a>
+    </li>
+    <li>
+      <strong>Teh, J. W.</strong>, Grasha, K., Krumholz, M. R., Battisti, A. J., Calzetti, D.,
+      Rousseau-Nepton, L., et al. (2023),
+      <em>Constraining the LyC escape fraction from LEGUS star clusters with SIGNALS H&nbsp;II
+      region observations: A pilot study of NGC&nbsp;628</em>, MNRAS, 524, 1191.
+      <a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.524.1191T/abstract">ADS</a>
+    </li>
+  </ol>
 
-					</section>
+  <h3>Co-author</h3>
+  <ol class="pubs" reversed>
+    <li>
+      Sheriff, K. E., Mills, E. A. C., Mai, X., Siwakoti, U., Duval, S. E., Bolatto, A. D.,
+      Levy, R. C., <strong>Teh, J. W.</strong>, et al. (2026),
+      <em>JWST Observations of Starbursts: A Young Bubble in NGC&nbsp;253's Central
+      Starburst</em>, submitted.
+      <a href="https://ui.adsabs.harvard.edu/abs/arXiv:2609.16190/abstract">ADS</a>
+    </li>
+    <li>
+      Soler, J. D., Beuther, H., Glover, S. C. O., Klessen, R. S., Ott, J., Rugel, M.,
+      <strong>Teh, J. W.</strong>, et al. (2026),
+      <em>The Neutral Atomic Hydrogen in the solar neighbourhood (NeAtHood) project: I. Ghost
+      in the shell: neutral atomic hydrogen in the extended Orion nebula</em>,
+      A&amp;A, 711, A85.
+      <a href="https://ui.adsabs.harvard.edu/abs/2026A%26A...711A..85S/abstract">ADS</a>
+    </li>
+    <li>
+      Scheuermann, F., Kreckel, K., <strong>Teh, J. W.</strong>, Belfiore, F., Groves, B.,
+      Barnes, A. T., et al. (2026),
+      <em>Stellar associations powering H&nbsp;II regions: II. Escape fraction of ionising
+      photons</em>, A&amp;A, 708, A202.
+      <a href="https://ui.adsabs.harvard.edu/abs/2026A%26A...708A.202S/abstract">ADS</a>
+    </li>
+    <li>
+      Polak, B., Mac Low, M.-M., Klessen, R. S., <strong>Teh, J. W.</strong>,
+      Cournoyer-Cloutier, C., Andersson, E. P., Appel, S. M., et al. (2024),
+      <em>Massive star cluster formation: I. High star formation efficiency while resolving
+      feedback of individual stars</em>, A&amp;A, 690, A94.
+      <a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...690A..94P/abstract">ADS</a>
+    </li>
+    <li>
+      Maconi, E., Soler, J. D., Reissl, S., Girichidis, P., Klessen, R. S., Hennebelle, P.,
+      Molinari, S., Testi, L., Smith, R. J., Sormani, M. C., <strong>Teh, J. W.</strong> (2023),
+      <em>Modelling Local Bubble analogs: synthetic dust polarization maps</em>,
+      MNRAS, 523, 5995.
+      <a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.523.5995M/abstract">ADS</a>
+    </li>
+  </ol>
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-							<ul class="contact">
-								<li class="icon solid fa-home">
-									Untitled Inc<br />
-									1234 Somewhere Road Suite #2894<br />
-									Nashville, TN 00000-0000
-								</li>
-								<li class="icon solid fa-phone">(000) 000-0000</li>
-								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
-								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
+</section>
 
-			</div>
+<section id="software">
+  <h2>Software</h2>
+  <p>
+    <strong>TRINITY</strong> — a one-dimensional thin-shell code for the feedback-driven
+    expansion of bubbles in molecular clouds. Given a cloud's mass, density profile,
+    star-formation efficiency and surroundings, it integrates the shell's radius, velocity,
+    thermal state and force budget through its phase transitions to its stopping fate.
+    Pure Python, GPL v3.
+    <a href="https://github.com/JiaWeiTeh/trinity">Source code</a> ·
+    <a href="https://jiaweiteh.github.io/trinity-web/">Documentation</a>
+  </p>
+</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>
+    jiaweiteh.astro (at) gmail.com<br>
+    Institut für Theoretische Astrophysik, Zentrum für Astronomie<br>
+    Universität Heidelberg<br>
+    Albert-Ueberle-Straße 2, 69120 Heidelberg, Germany
+  </p>
+</section>
 
-	</body>
+<footer>
+  Last updated October 2026.
+</footer>
+
+</body>
 </html>
