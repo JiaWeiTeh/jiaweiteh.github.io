@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jia Wei Teh</title>
   <meta name="description" content="Jia Wei Teh — PhD candidate in astrophysics at Universität Heidelberg, working on stellar feedback and the evolution of bubbles in molecular clouds. Lead developer of the TRINITY code.">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2026-10-11c">
 </head>
 <body>
 
@@ -54,11 +54,11 @@
     consortium.
   </p>
   <figure>
-    <div class="placeholder todo" style="aspect-ratio: 16 / 7">Figure 1 of Paper I goes here</div>
+    <a href="research/trinity-fig1.png"><img src="research/trinity-fig1.png" alt="Schematic of a feedback bubble: the energy-driven phase, the momentum-driven phase with the cloud, neutral and ionised shell, winds and hot bubble labelled, and the two outcomes, collapse or dispersal" width="1186" height="348"></a>
     <figcaption>
       What TRINITY models: winds from a young star cluster inflate a hot bubble that sweeps up a
       shell of ionised and neutral gas, until the shell either disperses its natal cloud or
-      stalls and re-collapses. Figure 1 of
+      stalls and re-collapses. Adapted from Figure 1 of
       <a href="https://arxiv.org/abs/2605.27517">Teh et al. (2026)</a>.
     </figcaption>
   </figure>
@@ -174,15 +174,22 @@
 
 <section id="software">
   <h2>Software</h2>
-  <p>
-    <strong>TRINITY</strong> — a one-dimensional thin-shell code for the feedback-driven
-    expansion of bubbles in molecular clouds. Given a cloud's mass, density profile,
-    star-formation efficiency and surroundings, it integrates the shell's radius, velocity,
-    thermal state and force budget through its phase transitions to its stopping fate.
-    Pure Python, GPL v3.
-    <a href="https://github.com/JiaWeiTeh/trinity">Source code</a> ·
-    <a href="https://jiaweiteh.github.io/trinity-web/">Documentation</a>
-  </p>
+  <div class="tile feature">
+    <a href="https://jiaweiteh.github.io/trinity-web/"><img src="projects/trinity.png" alt="TRINITY: simulating stellar feedback in molecular clouds" width="480" height="480"></a>
+    <div class="feature-body">
+      <span class="tile-title">TRINITY</span>
+      <p>
+        A one-dimensional thin-shell code for the feedback-driven expansion of bubbles in
+        molecular clouds. Given a cloud's mass, density profile, star-formation efficiency and
+        surroundings, it integrates the shell's radius, velocity, thermal state and force budget
+        through its phase transitions to its stopping fate. Pure Python, GPL v3.
+      </p>
+      <p>
+        <a href="https://github.com/JiaWeiTeh/trinity">Source code</a> ·
+        <a href="https://jiaweiteh.github.io/trinity-web/">Documentation</a>
+      </p>
+    </div>
+  </div>
 
   <h3>Other projects</h3>
   <div class="tiles">
@@ -226,6 +233,7 @@
       <span class="tile-title">Colour</span>
       <span class="tile-text">Blog post: Hue&#8209;man Rights in Data Visualisation</span>
     </a>
+    <!-- Hidden until there are photos or projects to show; remove the comment markers to restore.
     <div class="tile">
       <span class="tile-img placeholder todo">Photo or project</span>
       <span class="tile-title">Bouldering</span>
@@ -236,6 +244,7 @@
       <span class="tile-title">Piano</span>
       <span class="tile-text todo">[mini project]</span>
     </div>
+    -->
   </div>
 </section>
 
