@@ -30,7 +30,15 @@ footer { margin-top: 3rem; color: #777; font-size: 0.9rem; }
 
 .back { margin: 0 0 1.5rem; }
 figure { margin: 1.5rem 0; }
-figure img, .photos img { width: 100%; height: auto; border-radius: 4px; display: block; }
+figure img { display: block; max-width: 100%; height: auto; margin: 0 auto; border-radius: 4px; }
+.photos img { display: block; width: 100%; height: auto; border-radius: 4px; }
+.fig-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; align-items: center; }
+.fig-row.two { grid-template-columns: repeat(2, 1fr); }
+.fig-row img { width: 100%; }
+.meta { color: #666; font-size: 0.9rem; }
+.takehome { background: #f4f6f8; padding: 0.75rem 1rem; border-radius: 8px; font-weight: 600; }
+.credits li, .posts li { margin-bottom: 0.6rem; }
+.posts { list-style: none; padding: 0; }
 figcaption { margin-top: 0.4rem; color: #555; font-size: 0.9rem; }
 table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
 th, td { text-align: left; padding: 0.35rem 0.75rem 0.35rem 0; border-bottom: 1px solid #eee; }

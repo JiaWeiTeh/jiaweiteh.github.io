@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hue-man Rights in Data Visualisation — Jia Wei Teh</title>
+  <meta name="description" content="How colour theory and colour-blind friendliness shade your data: how we see colour, how colourmaps lie, and when rainbow maps actually help.">
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+<p class="back"><a href="../../">← Jia Wei Teh</a> · <a href="../">Blog</a></p>
+
+<article>
+<h1>Hue&#8209;man Rights in Data Visualisation</h1>
+<p class="subtitle">How colour theory and colour-blind friendliness shade your data.</p>
+<p class="meta">Jia Wei Teh · October 2026 · adapted from a talk</p>
+
+<p>
+  This is the written version of a talk I give on colour in scientific figures. It comes in
+  three parts: how we see colour (and how we don't), how colourmaps can lie, and when it is fine
+  to break the rules. A disclaimer first: I am not a Dr.&nbsp;med. This is the physics and
+  perception view, not the medical one.
+</p>
+
+<h2>1. How we see colour</h2>
+
+<p>
+  Our eyes have three types of cone cell. Long-wave cones respond across red, yellow and green,
+  with a small bump in the blue; middle-wave cones respond to yellow, green and blue; short-wave
+  cones to green and blue. Every colour we see is built from how strongly each type responds.
+</p>
+<figure>
+  <img src="cones.png" alt="Sensitivity of the long, middle and short wave cones across the visible spectrum" width="1000" height="526" loading="lazy">
+  <figcaption>The three cone types and the part of the spectrum each one responds to.</figcaption>
+</figure>
+
+<h3>Your retina does colour maths</h3>
+<p>
+  The three cones overlap heavily, so the retina never sends their raw signals to the brain. It
+  transmits their differences instead, which is far more efficient than three near-identical
+  signals. The signals recombine into three channels: luminance (L+M), red–green (L−M) and
+  blue–yellow (S−(L+M)). Every colour is a point in this three-axis space, and it is why
+  “reddish-green” and “yellowish-blue” don't exist (Hering 1878; Hurvich &amp; Jameson 1957).
+</p>
+
+<h3>Colour isn't universal</h3>
+<p>
+  Even people with “normal” vision perceive and name colours differently. In the xkcd colour
+  survey, more than 200,000 volunteers were each shown a colour and asked to name it. (Humanity,
+  it turns out, can't spell fuchsia.)
+</p>
+<figure>
+  <img src="xkcd-colour-survey.jpg" alt="Dominant colour names drawn over the fully saturated faces of the RGB cube" width="760" height="760" loading="lazy">
+  <figcaption>Dominant colour names over the fully saturated faces of the RGB cube.
+    Randall Munroe, <a href="https://blog.xkcd.com/2010/05/03/color-survey-results/">xkcd Color Survey Results</a> (2010), CC BY-NC 2.5.</figcaption>
+</figure>
+<p>
+  Nor do we tell all colours apart equally well. MacAdam's ellipses mark regions of colour space
+  that look the same to us, and they vary wildly in size and orientation: we are bad at
+  discriminating greens (big ellipses) but good at blues (small ellipses).
+</p>
+<figure>
+  <img src="macadam-ellipses.png" alt="MacAdam ellipses on the CIE 1931 chromaticity diagram" width="330" height="365" loading="lazy">
+  <figcaption><a href="https://en.wikipedia.org/wiki/MacAdam_ellipse">MacAdam (1942)</a> ellipses on the CIE 1931 chromaticity diagram. Image: Wikimedia Commons.</figcaption>
+</figure>
+
+<h3>Colour-blindness in a nutshell</h3>
+<p>
+  When one cone type doesn't work, part of the colour space collapses. Without long-wave cones
+  (protanopia) or middle-wave cones (deuteranopia), reds and greens become hard to tell apart;
+  without short-wave cones (tritanopia), blues and yellows do.
+</p>
+<figure>
+  <img src="colour-blindness.png" alt="The visible spectrum as seen with normal vision, protanopia, deuteranopia and tritanopia" width="1000" height="691" loading="lazy">
+  <figcaption>The spectrum with normal vision and with each type of colour-blindness.</figcaption>
+</figure>
+
+<h3>Why should we care?</h3>
+<p>
+  About 16 in every 200 men and 1 in every 200 women are colour-blind, so you probably know at
+  least 13 colour-blind people. One of them could be your reviewer. And if humans don't convince
+  you: 100 out of 100 dogs are colour-blind too.
+</p>
+<figure>
+  <div class="fig-row">
+    <img src="icons-men.png" alt="200 people, 16 of them marked" width="360" height="356" loading="lazy">
+    <img src="icons-women.png" alt="200 people, 1 of them marked" width="360" height="363" loading="lazy">
+    <img src="icons-dogs.png" alt="100 dogs, all marked" width="360" height="360" loading="lazy">
+  </div>
+  <figcaption>16 out of 200 men, 1 out of 200 women, 100 out of 100 dogs.</figcaption>
+</figure>
+
+<h3>So: use colour-blind-friendly palettes, and check them</h3>
+<p>
+  Colour-blind-friendly palettes are easy to find. CMasher, for example, shows how each of its
+  colourmaps looks to viewers with different colour-vision deficiencies. Before a figure goes
+  out, run it through a free simulator such as
+  <a href="https://www.color-blindness.com/coblis-color-blindness-simulator/">Coblis</a>.
+</p>
+<figure>
+  <img src="cmasher.jpg" alt="Documentation page of the CMasher colourmap 'emergency', with colour-vision diagnostics" width="1000" height="710" loading="lazy">
+  <figcaption>The <a href="https://cmasher.readthedocs.io/">CMasher</a> documentation for its “emergency” colourmap.
+    E. van der Velden (2020), <a href="https://doi.org/10.21105/joss.02004">JOSS 5, 2004</a>.</figcaption>
+</figure>
+<figure>
+  <img src="coblis.png" alt="A scatter plot as seen with normal vision, protanopia, deuteranopia and tritanopia" width="1000" height="312" loading="lazy">
+  <figcaption>One plot with normal vision, then with protanopia, deuteranopia and tritanopia, simulated with Coblis.</figcaption>
+</figure>
+
+<p class="takehome">Take-home 1: colour perception is unique. Be inclusive!</p>
+<p>
+  And take-home 1.5: mantis shrimp have up to 12 types of photoreceptor. Imagine if their
+  slides only worked for shrimps.
+</p>
+
+<h2>2. When colourmaps lie</h2>
+
+<h3>Our eyes work in logarithms</h3>
+<p>
+  We perceive differences in brightness as ratios, not steps: doubling the light feels the same
+  going from 1 to 2 as from 100 to 200. This is the Weber–Fechner law. It lets us see across
+  14 orders of magnitude, and it is why gamma correction exists.
+</p>
+<figure>
+  <img src="weber-fechner.png" alt="Grey bars in perceived equal steps of brightness" width="766" height="404" loading="lazy">
+  <figcaption>Perceived equal steps: each looks similar, despite a tenfold difference in light.</figcaption>
+</figure>
+
+<h3>Perceptual uniformity</h3>
+<p>
+  A good colourmap is perceptually uniform: a 10% change in colour is a 10% change in data. The
+  popular jet colourmap fails this. Print it in greyscale and its lightness rises and falls,
+  giving bright bands and sharp edges that are features of the colourmap, not of the data.
+</p>
+<figure>
+  <img src="jet-and-grey.png" alt="The jet colourbar and the same colourbar in greyscale, showing bright bands" width="886" height="738" loading="lazy">
+  <figcaption>The jet colourmap, and the same colourmap in greyscale.</figcaption>
+</figure>
+<p>
+  We can measure this by treating each colour as a point and computing the distance between
+  neighbouring colours, distance = √[(R₂−R₁)² + (G₂−G₁)² + (B₂−B₁)²]. In a uniform colourmap,
+  every step covers the same distance.
+</p>
+<p>
+  The <a href="https://github.com/matplotlib/viscm">viscm</a> tool plots this for any colourmap.
+  For jet, the perceptual derivative jumps around, the lightness goes up and down, and the
+  colours collapse for viewers with deuteranopia or protanopia.
+</p>
+<figure>
+  <img src="viscm-jet.png" alt="viscm diagnostics for jet: colourmap, greyscale print, perceptual derivatives and simulated colour-blindness" width="1000" height="681" loading="lazy">
+  <figcaption>viscm diagnostics for jet. Made with viscm (N. J. Smith &amp; S. van der Walt).</figcaption>
+</figure>
+
+<h3>The face test</h3>
+<p>
+  A quick check: a face shown in a reasonably uniform colourmap still looks like a face. Jet
+  turns it into something else entirely.
+</p>
+<figure>
+  <img src="face-test.jpg" alt="The same portrait in eight colourmaps: original, greyscale, jet, viridis, plasma, magma, inferno and cividis" width="1100" height="632" loading="lazy">
+  <figcaption>One portrait in eight colourmaps. Photo: NASA, astronaut Eileen Collins, public domain, via scikit-image.</figcaption>
+</figure>
+
+<h3>Colour qualifies, the legend quantifies</h3>
+<p>
+  Colour is good at showing a trend; the numbers belong in the legend. A good colourbar should
+  still convey the trend in greyscale. The data.europa.eu Data Visualisation Guide has a nice
+  example: <a href="https://data.europa.eu/apps/data-visualisation-guide/colour-for-numerical-data-endrainbow">a
+  rainbow map of rainfall in Texas</a>, where colour alone can't tell you which regions are
+  wetter.
+</p>
+
+<h3>Normalise your data</h3>
+<p>
+  Colour also needs the right normalisation. A county-level map of the 2016 US election is
+  mostly red because it colours land, not people. Karim Douïeb's animation
+  <a href="https://flowingdata.com/2019/10/08/fixing-the-impeach-this-map-with-a-transition-to-a-cartogram">“Land
+  doesn't vote, people do”</a> turns the same map into circles sized by votes, and the picture
+  changes completely.
+</p>
+
+<h3>A case study: ozone</h3>
+<p>
+  This example shows total column ozone on a rainbow scale. Based on it, you would identify three
+  zones of sharp change: a polar front (red), a mid-latitude front (yellow) and a sub-polar front
+  (blue).
+</p>
+<figure>
+  <div class="fig-row two">
+    <img src="ozone-rainbow.jpg" alt="Total column ozone map on a rainbow colour scale" width="700" height="625" loading="lazy">
+    <img src="ozone-fronts.jpg" alt="The same map with three apparent fronts drawn in red, yellow and blue" width="700" height="619" loading="lazy">
+  </div>
+  <figcaption>Total column ozone on a rainbow scale, and the three “fronts” it suggests.</figcaption>
+</figure>
+<p>
+  With a uniform colourbar, these “features” disappear. The abrupt changes were an artefact of a
+  non-uniform colourbar.
+</p>
+<figure>
+  <div class="fig-row two">
+    <img src="ozone-uniform.jpg" alt="The same ozone data on a uniform orange colour scale" width="516" height="492" loading="lazy">
+    <img src="ozone-gradient.jpg" alt="The gradient of the ozone field" width="438" height="427" loading="lazy">
+  </div>
+  <figcaption>The same data on a uniform colourbar, and its gradient. Ozone figures: S. Davis (NOAA), via the
+    <a href="https://data.europa.eu/apps/data-visualisation-guide/perceptual-uniformity">data.europa.eu Data Visualisation Guide</a>.</figcaption>
+</figure>
+
+<h3>The solution</h3>
+<p>
+  Use perceptually uniform colourmaps such as inferno, magma, plasma and viridis, which come
+  with matplotlib. Their lightness rises steadily, they survive greyscale printing, and they
+  stay readable for colour-blind viewers.
+</p>
+<figure>
+  <img src="colourmaps.png" alt="The inferno, magma, plasma and viridis colourmaps" width="1000" height="548" loading="lazy">
+  <figcaption>Inferno, magma, plasma and viridis.</figcaption>
+</figure>
+<figure>
+  <img src="viscm-viridis.png" alt="viscm diagnostics for viridis, smooth in every panel" width="1000" height="667" loading="lazy">
+  <figcaption>viscm diagnostics for viridis: smooth in every panel.</figcaption>
+</figure>
+
+<p class="takehome">Take-home 2: perceptual uniformity carries accurate data.</p>
+
+<h2>3. Breaking the rules</h2>
+
+<h3>Every cloud has a silver lining</h3>
+<p>
+  Rainbow maps are not useless. Their striking features give them decent depth perception.
+  Google's Turbo colourmap keeps the rainbow's high contrast while fixing some of jet's problems,
+  and <a href="https://research.google/blog/turbo-an-improved-rainbow-colormap-for-visualization/">Anton
+  Mikhailov's post introducing it</a> (2019) shows depth images where that contrast helps.
+</p>
+
+<h3>The upside of inaccurate maps</h3>
+<p>
+  High-contrast maps also reveal small details, which is why medical imaging often uses them.
+  For an example, see the PET images in
+  <a href="https://doi.org/10.1109/TMI.2014.2340135">Burgos et al. (2014)</a>.
+</p>
+
+<h3>A thought experiment</h3>
+<p>
+  Colour-vision tests such as Ishihara's plates hide a number in a field of coloured dots.
+  xkcd's version goes one step further.
+</p>
+<figure>
+  <div class="fig-row two">
+    <img src="xkcd-1213.png" alt="xkcd comic: Combination Vision Test" width="345" height="412" loading="lazy">
+    <img src="ishihara.jpg" alt="An Ishihara colour-vision plate" width="420" height="420" loading="lazy">
+  </div>
+  <figcaption>Randall Munroe, <a href="https://xkcd.com/1213/">xkcd #1213, “Combination Vision Test”</a> (2013), CC BY-NC 2.5;
+    and an Ishihara colour-vision plate (1917), public domain.</figcaption>
+</figure>
+
+<p class="takehome">Stay inclusive and uniform, and please, fix your defaults.</p>
+
+<h2>Image credits</h2>
+<ul class="credits">
+  <li>Randall Munroe, <a href="https://blog.xkcd.com/2010/05/03/color-survey-results/">Color Survey Results</a> (2010) and <a href="https://xkcd.com/1213/">Combination Vision Test</a> (2013), xkcd, CC BY-NC 2.5.</li>
+  <li>D. L. MacAdam (1942), Visual sensitivities to color differences in daylight, <a href="https://doi.org/10.1364/JOSA.32.000247">JOSA 32, 247</a>. Diagram: Wikimedia Commons.</li>
+  <li>E. van der Velden (2020), CMasher, <a href="https://doi.org/10.21105/joss.02004">JOSS 5, 2004</a>.</li>
+  <li>Colour-blindness simulations: <a href="https://www.color-blindness.com/coblis-color-blindness-simulator/">Coblis</a>.</li>
+  <li>Diagnostics: <a href="https://github.com/matplotlib/viscm">viscm</a>, N. J. Smith &amp; S. van der Walt.</li>
+  <li>Portrait: NASA, astronaut Eileen Collins, public domain, as distributed with scikit-image.</li>
+  <li>Ozone figures: S. Davis (NOAA), via the <a href="https://data.europa.eu/apps/data-visualisation-guide/perceptual-uniformity">data.europa.eu Data Visualisation Guide</a>.</li>
+  <li>Ishihara colour-vision plate: S. Ishihara (1917), public domain.</li>
+  <li>All other figures are my own.</li>
+</ul>
+<p>
+  References in the text: E. Hering (1878), <em>Zur Lehre vom Lichtsinne</em>; L. M. Hurvich &amp;
+  D. Jameson (1957), <em>Psychological Review</em> 64, 384.
+</p>
+</article>
+
+<footer>
+  Last updated October 2026.
+</footer>
+
+</body>
+</html>
