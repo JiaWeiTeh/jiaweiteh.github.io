@@ -50,6 +50,9 @@ a.tile:focus-visible { outline: 2px solid #1a5276; outline-offset: 2px; }
 .tile .placeholder { display: grid; place-items: center; }
 .tile-title { padding: 0.6rem 0.75rem 0; font-weight: 600; }
 .tile-text { padding: 0.1rem 0.75rem 0.75rem; font-size: 0.85rem; line-height: 1.4; color: #555; }
+.tile img.contain { object-fit: contain; background: #000; }
+.tile-type { display: grid; place-content: center; gap: 0.1rem; font-size: 1.7rem; font-weight: 700; line-height: 1.1; text-align: center; }
+.der { color: #0072b2; } .die { color: #d55e00; } .das { color: #009e73; }   /* Okabe-Ito: colour-blind safe */
 @media (prefers-reduced-motion: reduce) { .tile { transition: none; } a.tile:hover { transform: none; } }
 
 /* Placeholders still to be filled in. Delete this rule once none remain. */
