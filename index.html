@@ -5,28 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jia Wei Teh</title>
   <meta name="description" content="Jia Wei Teh — PhD candidate in astrophysics at Universität Heidelberg, working on stellar feedback and the evolution of bubbles in molecular clouds. Lead developer of the TRINITY code.">
-  <link rel="stylesheet" href="style.css?v=2026-10-11c">
+  <link rel="stylesheet" href="style.css?v=2026-10-11f">
 </head>
 <body>
-
-<header>
-  <img src="photo.jpg" alt="Jia Wei Teh" width="140" height="140">
-  <div>
-    <h1>Jia Wei Teh</h1>
-    <p class="subtitle">
-      PhD candidate in astrophysics<br>
-      Institut für Theoretische Astrophysik, Universität Heidelberg<br>
-      jiaweiteh.astro (at) gmail.com
-    </p>
-    <p class="links">
-      <a href="cv.pdf">CV (PDF)</a> ·
-      <a href="https://github.com/JiaWeiTeh">GitHub</a> ·
-      <a href="https://www.linkedin.com/in/jiaweiteh">LinkedIn</a> ·
-      <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0001-7863-5047&amp;sort=date%20desc">ADS</a> ·
-      <a href="https://orcid.org/0000-0001-7863-5047">ORCID</a>
-    </p>
-  </div>
-</header>
 
 <nav>
   <a href="#about">About</a>
@@ -35,8 +16,40 @@
   <a href="#software">Software</a>
   <a href="#outside">Outside research</a>
   <a href="blog/">Blog</a>
-  <a href="#contact">Contact</a>
 </nav>
+
+<header>
+  <img src="photo.jpg" alt="Jia Wei Teh" width="88" height="88">
+  <div>
+    <h1>Jia Wei Teh</h1>
+    <p class="subtitle">PhD candidate in astrophysics, Universität Heidelberg</p>
+  </div>
+</header>
+
+<p class="lede">
+  I study how young star clusters clear out the clouds they were born in. I develop
+  <a href="https://github.com/JiaWeiTeh/trinity">TRINITY</a>, a code that follows the winds,
+  radiation and photoionised gas doing the clearing, and I compare it with observations from
+  PHANGS, the SDSS&#8209;V Local Volume Mapper and JWST.
+</p>
+<p class="links">
+  <a href="cv.pdf">CV</a> ·
+  <a href="https://github.com/JiaWeiTeh">GitHub</a> ·
+  <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0001-7863-5047&amp;sort=date%20desc">ADS</a> ·
+  <a href="https://orcid.org/0000-0001-7863-5047">ORCID</a> ·
+  <a href="https://www.linkedin.com/in/jiaweiteh">LinkedIn</a> ·
+  jiaweiteh.astro (at) gmail.com
+</p>
+
+<figure class="lead-fig">
+  <a href="research/trinity-fig1.png"><img src="research/trinity-fig1.png" alt="Schematic of a feedback bubble: the energy-driven phase, the momentum-driven phase with the cloud, neutral and ionised shell, winds and hot bubble labelled, and the two outcomes, collapse or dispersal" width="1186" height="348"></a>
+  <figcaption>
+    <b>Figure 1.</b> What TRINITY models: winds from a young star cluster inflate a hot bubble that sweeps up a
+    shell of ionised and neutral gas, until the shell either disperses its natal cloud or
+    stalls and re-collapses. Adapted from Figure 1 of
+    <a href="https://arxiv.org/abs/2605.27517">Teh et al. (2026)</a>.
+  </figcaption>
+</figure>
 
 <section id="about">
   <h2>About</h2>
@@ -53,15 +66,6 @@
     I am a member of the PHANGS and SDSS-V/LVM collaborations and the ECOGAL ERC Synergy
     consortium.
   </p>
-  <figure>
-    <a href="research/trinity-fig1.png"><img src="research/trinity-fig1.png" alt="Schematic of a feedback bubble: the energy-driven phase, the momentum-driven phase with the cloud, neutral and ionised shell, winds and hot bubble labelled, and the two outcomes, collapse or dispersal" width="1186" height="348"></a>
-    <figcaption>
-      What TRINITY models: winds from a young star cluster inflate a hot bubble that sweeps up a
-      shell of ionised and neutral gas, until the shell either disperses its natal cloud or
-      stalls and re-collapses. Adapted from Figure 1 of
-      <a href="https://arxiv.org/abs/2605.27517">Teh et al. (2026)</a>.
-    </figcaption>
-  </figure>
   <p>
     Before Heidelberg I studied astronomy and astrophysics at the Australian National
     University.
@@ -191,13 +195,24 @@
     </div>
   </div>
 
+  <div class="tile feature">
+    <a href="https://github.com/JiaWeiTeh/simplify"><img src="projects/astrosimplify.gif" alt="Animation: a bubble temperature profile rebuilt from more and more points" width="552" height="552" loading="lazy"></a>
+    <div class="feature-body">
+      <span class="tile-title">astrosimplify</span>
+      <p>
+        Downsamples 1-D astrophysical profiles, such as radial density and temperature, stellar
+        tracks and spectra, while keeping their sharp transitions, local extrema and overall
+        shape. Needs only NumPy. MIT licence.
+      </p>
+      <p>
+        <a href="https://github.com/JiaWeiTeh/simplify">Source code</a> ·
+        <a href="https://pypi.org/project/astrosimplify/">PyPI</a>
+      </p>
+    </div>
+  </div>
+
   <h3>Other projects</h3>
   <div class="tiles">
-    <a class="tile" href="https://github.com/JiaWeiTeh/simplify">
-      <img src="projects/astrosimplify.gif" alt="Animation: a bubble temperature profile rebuilt from more and more points" width="552" height="552" loading="lazy">
-      <span class="tile-title">astrosimplify</span>
-      <span class="tile-text">Downsamples 1-D profiles, keeping their sharp features</span>
-    </a>
     <a class="tile" href="https://github.com/JiaWeiTeh/gpx_vis">
       <img src="projects/gpx_vis.jpg" alt="A cycling track on a dark map, coloured by elevation" width="480" height="480" loading="lazy">
       <span class="tile-title">gpx_vis</span>
@@ -212,6 +227,11 @@
       <img class="contain" src="projects/ballgame.gif" alt="Self-playing Pong screensaver" width="768" height="396" loading="lazy">
       <span class="tile-title">BallGame</span>
       <span class="tile-text">A self-playing Pong screensaver, in matplotlib</span>
+    </a>
+    <a class="tile" href="https://github.com/JiaWeiTeh/BounceGame">
+      <img src="projects/bouncegame.gif" alt="A ball bouncing inside a circular wall" width="320" height="320" loading="lazy">
+      <span class="tile-title">BounceGame</span>
+      <span class="tile-text">A ball bouncing in a circle under gravity and drag, in matplotlib</span>
     </a>
   </div>
 </section>
