@@ -43,7 +43,8 @@ figcaption { margin-top: 0.4rem; color: #555; font-size: 0.9rem; }
 table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
 th, td { text-align: left; padding: 0.35rem 0.75rem 0.35rem 0; border-bottom: 1px solid #eee; }
 .num { text-align: right; padding-right: 0; }
-.photos { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: 0.75rem; }
+.photos { columns: 3 11rem; column-gap: 0.75rem; }
+.photos a { display: block; margin-bottom: 0.75rem; break-inside: avoid; }
 .placeholder { aspect-ratio: 4 / 3; display: grid; place-items: center; color: #555; border-radius: 4px; }
 
 .map { display: block; width: 100%; aspect-ratio: 4 / 3; min-height: 300px; border: 1px solid #e3e6ea; border-radius: 8px; }
@@ -56,6 +57,12 @@ a.tile:hover { box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); transform: translateY
 a.tile:focus-visible { outline: 2px solid #1a5276; outline-offset: 2px; }
 .tile img, .tile-img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 0; background: #f4f6f8; }
 .tile .placeholder { display: grid; place-items: center; }
+.tile.feature { flex-direction: row; margin-bottom: 1.75rem; }
+.tile.feature > a { flex: 0 0 38%; }
+.feature-body { padding: 0.9rem 1.1rem; }
+.feature-body .tile-title { display: block; padding: 0 0 0.3rem; font-size: 1.1rem; }
+.feature-body p { margin: 0 0 0.6rem; font-size: 0.95rem; }
+@media (max-width: 600px) { .tile.feature { flex-direction: column; } .tile.feature > a { flex: none; } }
 .tile-title { padding: 0.6rem 0.75rem 0; font-weight: 600; }
 .tile-text { padding: 0.1rem 0.75rem 0.75rem; font-size: 0.85rem; line-height: 1.4; color: #555; }
 .tile img.contain { object-fit: contain; background: #000; }
