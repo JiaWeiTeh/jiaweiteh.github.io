@@ -12,8 +12,8 @@
 <nav>
   <a href="#about">About</a>
   <a href="#research">Research</a>
-  <a href="#publications">Publications</a>
   <a href="#software">Software</a>
+  <a href="#publications">Publications</a>
   <a href="#outside">Outside research</a>
   <a href="blog/">Blog</a>
 </nav>
@@ -108,6 +108,42 @@
   </p>
 </section>
 
+<section id="software">
+  <h2>Software</h2>
+  <div class="tile feature">
+    <a href="https://jiaweiteh.github.io/trinity-web/"><img src="projects/trinity.png" alt="TRINITY: simulating stellar feedback in molecular clouds" width="480" height="480"></a>
+    <div class="feature-body">
+      <span class="tile-title">TRINITY</span>
+      <p>
+        A one-dimensional thin-shell code for the feedback-driven expansion of bubbles in
+        molecular clouds. Given a cloud's mass, density profile, star-formation efficiency and
+        surroundings, it integrates the shell's radius, velocity, thermal state and force budget
+        through its phase transitions to its stopping fate. Pure Python, GPL v3.
+      </p>
+      <p>
+        <a href="https://github.com/JiaWeiTeh/trinity">Source code</a> ·
+        <a href="https://jiaweiteh.github.io/trinity-web/">Documentation</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="tile feature">
+    <a href="https://github.com/JiaWeiTeh/simplify"><img src="projects/astrosimplify.gif" alt="Animation: a bubble temperature profile rebuilt from more and more points" width="552" height="552" loading="lazy"></a>
+    <div class="feature-body">
+      <span class="tile-title">astrosimplify</span>
+      <p>
+        Downsamples 1-D astrophysical profiles, such as radial density and temperature, stellar
+        tracks and spectra, while keeping their sharp transitions, local extrema and overall
+        shape. Needs only NumPy. MIT licence.
+      </p>
+      <p>
+        <a href="https://github.com/JiaWeiTeh/simplify">Source code</a> ·
+        <a href="https://pypi.org/project/astrosimplify/">PyPI</a>
+      </p>
+    </div>
+  </div>
+</section>
+
 <section id="publications">
   <h2>Publications</h2>
   <p>
@@ -176,67 +212,6 @@
 
 </section>
 
-<section id="software">
-  <h2>Software</h2>
-  <div class="tile feature">
-    <a href="https://jiaweiteh.github.io/trinity-web/"><img src="projects/trinity.png" alt="TRINITY: simulating stellar feedback in molecular clouds" width="480" height="480"></a>
-    <div class="feature-body">
-      <span class="tile-title">TRINITY</span>
-      <p>
-        A one-dimensional thin-shell code for the feedback-driven expansion of bubbles in
-        molecular clouds. Given a cloud's mass, density profile, star-formation efficiency and
-        surroundings, it integrates the shell's radius, velocity, thermal state and force budget
-        through its phase transitions to its stopping fate. Pure Python, GPL v3.
-      </p>
-      <p>
-        <a href="https://github.com/JiaWeiTeh/trinity">Source code</a> ·
-        <a href="https://jiaweiteh.github.io/trinity-web/">Documentation</a>
-      </p>
-    </div>
-  </div>
-
-  <div class="tile feature">
-    <a href="https://github.com/JiaWeiTeh/simplify"><img src="projects/astrosimplify.gif" alt="Animation: a bubble temperature profile rebuilt from more and more points" width="552" height="552" loading="lazy"></a>
-    <div class="feature-body">
-      <span class="tile-title">astrosimplify</span>
-      <p>
-        Downsamples 1-D astrophysical profiles, such as radial density and temperature, stellar
-        tracks and spectra, while keeping their sharp transitions, local extrema and overall
-        shape. Needs only NumPy. MIT licence.
-      </p>
-      <p>
-        <a href="https://github.com/JiaWeiTeh/simplify">Source code</a> ·
-        <a href="https://pypi.org/project/astrosimplify/">PyPI</a>
-      </p>
-    </div>
-  </div>
-
-  <h3>Side projects</h3>
-  <p>Small things I wrote while teaching myself Python, 2022–2023.</p>
-  <div class="tiles">
-    <a class="tile" href="https://github.com/JiaWeiTeh/gpx_vis">
-      <img src="projects/gpx_vis.jpg" alt="A cycling track on a dark map, coloured by elevation" width="480" height="480" loading="lazy">
-      <span class="tile-title">gpx_vis <span class="year">2023</span></span>
-      <span class="tile-text">Turns GPX tracks into interactive elevation maps</span>
-    </a>
-    <a class="tile" href="https://github.com/JiaWeiTeh/gelato">
-      <span class="tile-img tile-type" aria-hidden="true"><span class="der">der</span><span class="die">die</span><span class="das">das</span></span>
-      <span class="tile-title">GELATO <span class="year">2022</span></span>
-      <span class="tile-text">A terminal quiz for German articles and verbs</span>
-    </a>
-    <a class="tile" href="https://github.com/JiaWeiTeh/ballgame">
-      <img class="contain" src="projects/ballgame.gif" alt="Self-playing Pong screensaver" width="768" height="396" loading="lazy">
-      <span class="tile-title">BallGame <span class="year">2022</span></span>
-      <span class="tile-text">A self-playing Pong screensaver, in matplotlib</span>
-    </a>
-    <a class="tile" href="https://github.com/JiaWeiTeh/BounceGame">
-      <img src="projects/bouncegame.gif" alt="A ball bouncing inside a circular wall" width="320" height="320" loading="lazy">
-      <span class="tile-title">BounceGame <span class="year">2022</span></span>
-      <span class="tile-text">A ball bouncing in a circle under gravity and drag, in matplotlib</span>
-    </a>
-  </div>
-</section>
-
 <section id="outside">
   <h2>Outside research</h2>
   <p>
@@ -267,6 +242,31 @@
       <span class="tile-text todo">[mini project]</span>
     </div>
     -->
+  </div>
+
+  <h3>Side projects</h3>
+  <p>Small things I wrote while teaching myself Python, 2022–2023.</p>
+  <div class="tiles">
+    <a class="tile" href="https://github.com/JiaWeiTeh/gpx_vis">
+      <img src="projects/gpx_vis.jpg" alt="A cycling track on a dark map, coloured by elevation" width="480" height="480" loading="lazy">
+      <span class="tile-title">gpx_vis <span class="year">2023</span></span>
+      <span class="tile-text">Turns GPX tracks into interactive elevation maps</span>
+    </a>
+    <a class="tile" href="https://github.com/JiaWeiTeh/gelato">
+      <span class="tile-img tile-type" aria-hidden="true"><span class="der">der</span><span class="die">die</span><span class="das">das</span></span>
+      <span class="tile-title">GELATO <span class="year">2022</span></span>
+      <span class="tile-text">A terminal quiz for German articles and verbs</span>
+    </a>
+    <a class="tile" href="https://github.com/JiaWeiTeh/ballgame">
+      <img class="contain" src="projects/ballgame.gif" alt="Self-playing Pong screensaver" width="768" height="396" loading="lazy">
+      <span class="tile-title">BallGame <span class="year">2022</span></span>
+      <span class="tile-text">A self-playing Pong screensaver, in matplotlib</span>
+    </a>
+    <a class="tile" href="https://github.com/JiaWeiTeh/BounceGame">
+      <img src="projects/bouncegame.gif" alt="A ball bouncing inside a circular wall" width="320" height="320" loading="lazy">
+      <span class="tile-title">BounceGame <span class="year">2022</span></span>
+      <span class="tile-text">A ball bouncing in a circle under gravity and drag, in matplotlib</span>
+    </a>
   </div>
 </section>
 
