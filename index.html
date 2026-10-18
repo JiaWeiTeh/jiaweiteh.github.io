@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jia Wei Teh</title>
   <meta name="description" content="Jia Wei Teh — PhD candidate in astrophysics at Universität Heidelberg, working on stellar feedback and the evolution of bubbles in molecular clouds. Lead developer of the TRINITY code.">
-  <link rel="stylesheet" href="style.css?v=2026-10-18">
+  <link rel="stylesheet" href="style.css?v=2026-10-18b">
   <script src="site.js"></script>
 </head>
 <body>
@@ -28,10 +28,15 @@
 </header>
 
 <p class="lede">
-  I study how young star clusters clear out the clouds they were born in. I develop
-  <a href="https://jiaweiteh.github.io/trinity-web/">TRINITY</a>, a code that follows the winds,
-  radiation and photoionised gas doing the clearing, and I compare it with observations from
-  PHANGS, the SDSS&#8209;V Local Volume Mapper and JWST.
+  Hello! I am interested in the galactic baryon cycle, focusing on how young stars disperse their
+  <a href="https://www.eso.org/public/images/eso1701a/" target="_blank">natal molecular clouds</a> and redistribute gas into the
+  surrounding interstellar medium. To do so, I develop
+  <a href="https://jiaweiteh.github.io/trinity-web/">TRINITY</a>, a code that models the evolution of
+  <a href="https://www.eso.org/public/images/eso0840a/" target="_blank">interstellar bubbles</a> under the influence of important
+  stellar feedback processes (stellar winds, photoionised gas and radiation). I also work with
+  observations from the <a href="https://phangs.org/" target="_blank">PHANGS</a> and
+  <a href="https://www.sdss.org/dr20/lvm/about/" target="_blank">SDSS&#8209;V Local Volume Mapper</a>
+  surveys to test these models against real star&#8209;forming regions.
 </p>
 <p class="links">
   <a href="cv.pdf">CV</a> ·
@@ -45,31 +50,22 @@
 <figure class="lead-fig">
   <a href="research/trinity-fig1.png"><img src="research/trinity-fig1.png" alt="Schematic of a feedback bubble: the energy-driven phase, the momentum-driven phase with the cloud, neutral and ionised shell, winds and hot bubble labelled, and the two outcomes, collapse or dispersal" width="1186" height="348"></a>
   <figcaption>
-    <b>Figure 1.</b> What TRINITY models: winds from a young star cluster inflate a hot bubble that sweeps up a
-    shell of ionised and neutral gas, until the shell either disperses its natal cloud or
-    stalls and re-collapses. Adapted from Figure 1 of
-    <a href="https://arxiv.org/abs/2605.27517">Teh et al. (2026)</a>.
+    <b>How TRINITY works.</b> Winds from a young star cluster inflate a hot bubble and sweep the
+    surrounding gas into a shell. Depending on the properties of the cloud and the stars inside it,
+    the shell may expand far enough to disperse the cloud, or stall and collapse again. Adapted from
+    Figure 1 of <a href="https://arxiv.org/abs/2605.27517">Teh et al. (2026)</a>.
   </figcaption>
 </figure>
 
 <section id="about">
   <h2>About</h2>
   <p>
-    I am a PhD candidate at the Institut für Theoretische Astrophysik, Universität Heidelberg,
-    within the International Max Planck Research School for Astronomy and Cosmic Physics,
-    supervised by Ralf Klessen, Simon Glover and Kathryn Kreckel.
-  </p>
-  <p>
-    I study stellar feedback and the evolution of interstellar bubbles in giant molecular
-    clouds. I am the lead developer of <a href="https://jiaweiteh.github.io/trinity-web/">TRINITY</a>,
-    a one-dimensional thin-shell feedback code, and apply it to resolved surveys of nearby
-    galaxies and Galactic star-forming regions (PHANGS, SDSS-V Local Volume Mapper, JWST).
-    I am a member of the PHANGS and SDSS-V/LVM collaborations and the ECOGAL ERC Synergy
-    consortium.
-  </p>
-  <p>
-    Before Heidelberg I studied astronomy and astrophysics at the Australian National
-    University.
+    I am a PhD candidate at the Institut für Theoretische Astrophysik, Heidelberg University, where
+    I work with Ralf Klessen, Simon Glover and Kathryn Kreckel. I am also part of the International
+    Max Planck Research School for Astronomy and Cosmic Physics. Before coming to Heidelberg, I
+    studied astronomy and astrophysics at the Australian National University and graduated with
+    first-class honours. I also did summer research projects at CSIRO, Leiden Observatory and
+    Swinburne University of Technology.
   </p>
 </section>
 
@@ -92,24 +88,28 @@
 
   <h3>Confronting the model with resolved observations</h3>
   <p>
-    The model predicts quantities that can be compared directly with data: the shell's size
-    and velocity, the balance of forces driving it, and the fraction of ionising photons that
-    escape. I am using SDSS-V Local Volume Mapper integral-field spectroscopy of the Rosette
-    Nebula to test the feedback history of its central cluster, and I contribute TRINITY
-    models to studies of <a href="https://ui.adsabs.harvard.edu/abs/arXiv:2609.16190/abstract" target="_blank">the
-    young bubble in the central starburst of NGC&nbsp;253</a> with JWST and of
+    TRINITY predicts how bubbles grow and expand, which feedback processes drive them, and how many
+    ionising photons escape their H&nbsp;II regions. These predictions can be tested against
+    observations of nearby star-forming regions.
+  </p>
+  <p>
+    I am currently using spectroscopy from the SDSS-V Local Volume Mapper to study the Rosette
+    Nebula and investigate how its central star cluster has shaped the surrounding gas. I also
+    contribute TRINITY models to studies of
+    <a href="https://ui.adsabs.harvard.edu/abs/arXiv:2609.16190/abstract" target="_blank">a young bubble
+    in the central starburst of NGC&nbsp;253</a>, observed with JWST, and of
     <a href="https://ui.adsabs.harvard.edu/abs/2026A%26A...711A..85S/abstract" target="_blank">neutral
-    atomic hydrogen around the Orion nebula</a>.
+    atomic hydrogen around the Orion Nebula</a>.
   </p>
 
   <h3>Escape of ionising photons from H&nbsp;II regions</h3>
   <p>
-    <a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.524.1191T/abstract" target="_blank">My
-    earlier work</a> combined LEGUS star-cluster catalogues with SIGNALS H&nbsp;II-region
-    spectroscopy of NGC&nbsp;628 to constrain the fraction of Lyman-continuum photons that
-    escape individual H&nbsp;II regions, a thread continued in the
-    <a href="https://ui.adsabs.harvard.edu/abs/2026A%26A...708A.202S/abstract" target="_blank">PHANGS
-    study of the stellar associations powering H&nbsp;II regions</a>.
+    Before working on TRINITY, I studied how many ionising photons escape from H&nbsp;II regions. In
+    <a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.524.1191T/abstract" target="_blank">my first
+    paper</a>, I combined LEGUS star-cluster catalogues with SIGNALS spectroscopy of NGC&nbsp;628 to
+    constrain the escape fraction of Lyman-continuum photons from individual regions. I later
+    contributed to <a href="https://ui.adsabs.harvard.edu/abs/2026A%26A...708A.202S/abstract" target="_blank">a PHANGS study of the stellar associations
+    powering H&nbsp;II regions</a> and the escape of their ionising radiation.
   </p>
 </section>
 
@@ -120,11 +120,13 @@
     <div class="feature-body">
       <span class="tile-title">TRINITY</span>
       <p>
-        A one-dimensional thin-shell code for the feedback-driven expansion of bubbles in
-        molecular clouds. Given a cloud's mass, density profile, star-formation efficiency and
-        surroundings, it integrates the shell's radius, velocity, thermal state and force budget
-        through its phase transitions to its stopping fate. Pure Python, GPL v3.
+        TRINITY is a one-dimensional code for modelling how stellar feedback drives expanding bubbles
+        inside molecular clouds. Given a cloud's mass, density profile, star-formation efficiency and
+        surrounding conditions, it follows the radius, velocity, thermal state and forces acting on
+        the expanding shell. It can model whether the cloud is dispersed or the shell stalls and
+        eventually collapses again.
       </p>
+      <p>Written in Python and released under GPL v3.</p>
       <p>
         <a href="https://github.com/JiaWeiTeh/trinity">Source code</a> ·
         <a href="https://jiaweiteh.github.io/trinity-web/">Documentation</a>
@@ -137,9 +139,10 @@
     <div class="feature-body">
       <span class="tile-title">astrosimplify</span>
       <p>
-        Downsamples 1-D astrophysical profiles, such as radial density and temperature, stellar
-        tracks and spectra, while keeping their sharp transitions, local extrema and overall
-        shape. Needs only NumPy. MIT licence.
+        astrosimplify reduces the number of points in one&#8209;dimensional data without losing important
+        features, such as sharp transitions, peaks and troughs. I made it for working with
+        astrophysical profiles, including radial density and temperature distributions, stellar
+        tracks and spectra. It only requires NumPy and is released under the MIT licence.
       </p>
       <p>
         <a href="https://github.com/JiaWeiTeh/simplify">Source code</a> ·
@@ -246,9 +249,9 @@
 
   <h3>Hobbies</h3>
   <p>
-    Outside work I like hiking, taking photos, and picking a town on the map more or less at
-    random and cycling there. I also boulder, play the piano, and care a lot about how colour
-    is used in scientific figures.
+    Outside astronomy, I like hiking, taking photos, bouldering and playing the piano. I also enjoy
+    picking a town more or less at random on a map and cycling there. And I probably spend more time
+    than necessary thinking about colours in scientific figures.
   </p>
   <div class="tiles">
     <a class="tile" href="routes/">
