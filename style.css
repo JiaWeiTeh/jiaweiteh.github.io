@@ -50,6 +50,7 @@ figure img { display: block; max-width: 100%; height: auto; margin: 0 auto; bord
 .fig-row.two { grid-template-columns: repeat(2, 1fr); }
 .fig-row img { width: 100%; }
 .meta { color: #666; font-size: 0.9rem; }
+.formula { text-align: center; }
 .takehome { background: #f4f6f8; padding: 0.75rem 1rem; border-radius: 8px; font-weight: 600; }
 .credits li, .posts li { margin-bottom: 0.6rem; }
 .posts { list-style: none; padding: 0; }
