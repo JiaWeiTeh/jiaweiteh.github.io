@@ -5,6 +5,7 @@
 @font-face { font-family: "Source Serif 4"; src: url(fonts/source-serif-4-latin-600-italic.woff2) format("woff2"); font-weight: 600; font-style: italic; font-display: swap; }
 html {
   font: 18px/1.6 "Source Serif 4", Georgia, serif;
+  scroll-padding-top: 4rem;   /* menu jumps land below the sticky menu */
 }
 body {
   max-width: 43rem;
@@ -15,9 +16,14 @@ body {
 }
 a { color: #8a1c1c; text-decoration-thickness: 1px; text-underline-offset: 2px; }
 
-nav { margin: 0 0 3.25rem; }
+nav { position: sticky; top: 0; z-index: 2; display: flow-root; margin: 0 -1.25rem 3.25rem; padding: 0.6rem 1.25rem;
+      background: #fdfcf9; border-bottom: 1px solid #ece8df; }
 nav a { margin-right: 1.1rem; color: #5a5a5a; text-decoration: none; font-size: 0.95rem; }
 nav a:hover { color: #8a1c1c; }
+nav a[aria-current] { color: #8a1c1c; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1.5px; }
+.theme { float: right; width: 1.9rem; height: 1.9rem; margin-left: 0.6rem; font: 1rem/1 "Source Serif 4", Georgia, serif;
+         color: #5a5a5a; background: none; border: 1px solid #d8d3c8; border-radius: 50%; cursor: pointer; }
+.back .theme { margin-top: -0.25rem; }
 
 header { display: flex; gap: 1.1rem; align-items: center; }
 header img { width: 88px; height: 88px; object-fit: cover; border-radius: 50%; flex: none; }
@@ -76,13 +82,41 @@ a.tile:focus-visible { outline: 2px solid #8a1c1c; outline-offset: 2px; }
 .der { color: #0072b2; } .die { color: #d55e00; } .das { color: #009e73; }   /* Okabe-Ito: colour-blind safe */
 @media (prefers-reduced-motion: reduce) { .tile { transition: none; } a.tile:hover { transform: none; } }
 
+/* Colour-vision switch on the colour post */
+.vision { position: sticky; top: 0; z-index: 2; margin: 1.2rem -1.25rem 0.5rem; padding: 0.5rem 1.25rem;
+          background: #fdfcf9; border-bottom: 1px solid #ece8df; font-size: 0.88rem; color: #5a5a5a; }
+.vision button { font: inherit; color: #5a5a5a; background: none; border: 1px solid #d8d3c8; border-radius: 999px;
+                 padding: 0.1rem 0.65rem; margin: 0.15rem 0.1rem; cursor: pointer; }
+.vision button[aria-pressed=true] { color: #fff; background: #8a1c1c; border-color: #8a1c1c; }
+body[data-vision=protan] article figure img { filter: url(#cvd-protan); }
+body[data-vision=deutan] article figure img { filter: url(#cvd-deutan); }
+body[data-vision=grey] article figure img { filter: url(#cvd-grey); }
+
+/* Dark theme, switched by site.js */
+:root[data-theme=dark] body { color: #e6e1d6; background: #1b1a17; }
+:root[data-theme=dark] a { color: #e4907f; }
+:root[data-theme=dark] :is(nav a, .subtitle, .links, footer, .meta, .tile-text, .tile-title .year, .theme, .vision, .vision button) { color: #a9a396; }
+:root[data-theme=dark] :is(nav a:hover, nav a[aria-current]) { color: #e4907f; }
+:root[data-theme=dark] :is(nav, .vision) { background: #1b1a17; border-bottom-color: #2e2b26; }
+:root[data-theme=dark] :is(.theme, .vision button) { border-color: #3d3a34; }
+:root[data-theme=dark] .vision button[aria-pressed=true] { color: #1b1a17; background: #e4907f; border-color: #e4907f; }
+:root[data-theme=dark] figcaption { color: #bdb7aa; }
+:root[data-theme=dark] figure img { mix-blend-mode: normal; }
+:root[data-theme=dark] .takehome { background: #26241f; }
+:root[data-theme=dark] .tile { color: inherit; background: #23211d; border-color: #35322c; }
+:root[data-theme=dark] :is(.tile img, .tile-img) { background: #2c2925; }
+:root[data-theme=dark] a.tile:focus-visible { outline-color: #e4907f; }
+:root[data-theme=dark] .map { border-color: #35322c; }
+:root[data-theme=dark] header img { filter: brightness(0.92); }
+
 /* Placeholders still to be filled in. Delete this rule once none remain. */
 .todo { background: #fff3a3; }
 
 
 @media (max-width: 600px) {
   body { margin: 1.5rem auto; }
-  nav { margin-bottom: 2rem; }
+  nav { position: static; margin-bottom: 2rem; }   /* wraps to three lines on a phone: too tall to stick */
+  .vision { white-space: nowrap; overflow-x: auto; }   /* one scrollable line, so the sticky bar stays short */
   header { gap: 0.9rem; }
   header img { width: 64px; height: 64px; }
   h1 { font-size: 1.7rem; }
