@@ -3,6 +3,7 @@
 Personal website, served by GitHub Pages from the root of `main`. No build step: edit, commit, push.
 
 - `index.html` is the whole site; `style.css` is the styling.
+- `site.js` (loaded on every page) handles the light/dark switch and marks the current section in the menu.
 - `photo.jpg` and `cv.pdf` live at the repo root; overwrite them with the real files.
 - `fonts/` holds the self-hosted Source Serif 4 web fonts (SIL Open Font License, see `fonts/OFL.txt`).
  
