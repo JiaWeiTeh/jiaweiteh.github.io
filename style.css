@@ -51,6 +51,10 @@ figure img { display: block; max-width: 100%; height: auto; margin: 0 auto; bord
 .fig-row img { width: 100%; }
 .meta { color: #666; font-size: 0.9rem; }
 .formula { text-align: center; }
+.peek { position: relative; white-space: nowrap; }
+.peek > span { display: none; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); z-index: 20; width: 20rem; max-width: 80vw; padding: 0.4rem; white-space: normal; color: #666; font-size: 0.75rem; line-height: 1.4; background: #fdfcf9; border: 1px solid #e5e1d8; border-radius: 6px; box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+.peek > span img { display: block; width: 100%; height: auto; margin-bottom: 0.3rem; }
+@media (hover: hover) and (min-width: 700px) { .peek:is(:hover, :focus-visible) > span { display: block; } }
 .takehome { background: #f4f6f8; padding: 0.75rem 1rem; border-radius: 8px; font-weight: 600; }
 .credits li, .posts li { margin-bottom: 0.6rem; }
 .posts { list-style: none; padding: 0; }
@@ -108,6 +112,7 @@ body[data-vision=grey] article figure img { filter: url(#cvd-grey); }
 :root[data-theme=dark] :is(.tile img, .tile-img) { background: #2c2925; }
 :root[data-theme=dark] a.tile:focus-visible { outline-color: #e4907f; }
 :root[data-theme=dark] .map { border-color: #35322c; }
+:root[data-theme=dark] .peek > span { color: #a9a396; background: #23211d; border-color: #35322c; }
 :root[data-theme=dark] header img { filter: brightness(0.92); }
 
 /* Placeholders still to be filled in. Delete this rule once none remain. */
