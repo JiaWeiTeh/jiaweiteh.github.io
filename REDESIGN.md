@@ -65,7 +65,7 @@ nav:  About · Research · Papers · Code · Routes · Blog      (drop "Outside 
                 the bubble schematic lives here, not at the top
 7. Papers       first-author in full; co-author compact (First author et al., year, journal)
 8. Code         TRINITY and astrosimplify, one image each, 2 sentences each
-9. Elsewhere    hobbies paragraph (keep the random-town cycling line), Routes, blog
+9. Elsewhere    hobbies paragraph (keep the town-on-a-map cycling line), Routes, blog
                 side projects as one line of links or tiny tiles
 10. Contact     email + institute, no street address
 11. footer      "Last updated …"                            unchanged
@@ -115,7 +115,7 @@ Target: roughly half the current height on desktop and phone.
 
 ### Elsewhere (currently "Outside research")
 - Rename. "Elsewhere", "Not astronomy", or just "Routes and other things".
-- Keep the hobbies paragraph. "I also enjoy picking a town more or less at random on a map and
+- Keep the hobbies paragraph. "I also enjoy picking a town on a map and
   cycling there" is the most human sentence on the site. Put it higher.
 - Side projects (2022–23 Python toys): fold into one line of links, or keep as tiny tiles at the
   very end. The black BallGame tile is visually the heaviest thing on the page and the least
@@ -146,6 +146,7 @@ Phrases to cut when encountered, with their fix:
 | "These predictions can be tested against observations"    | "I check this against …"              |
 | "I also contribute TRINITY models to studies of"          | "I helped with …"                     |
 | any "X — Y — Z" list inside a sentence                    | a plain list, or three short sentences |
+| any wording that calls the town-picking random            | cut it, the author dislikes it        |
 
 ## Order of work
 
