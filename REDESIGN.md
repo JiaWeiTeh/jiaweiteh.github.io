@@ -129,8 +129,8 @@ Target: roughly half the current height on desktop and phone.
 
 ### Elsewhere (currently "Outside research")
 - Rename. "Elsewhere", "Not astronomy", or just "Routes and other things".
-- Keep the hobbies paragraph. "I also enjoy picking a town on a map and
-  cycling there" is the most human sentence on the site. Put it higher.
+- Keep the hobbies paragraph. "I also enjoy picking random towns in
+  Germany and cycling there" is the most human sentence on the site. Put it higher.
 - Side projects (2022–23 Python toys): fold into one line of links, or keep as tiny tiles at the
   very end. The black BallGame tile is visually the heaviest thing on the page and the least
   important.
@@ -160,7 +160,6 @@ Phrases to cut when encountered, with their fix:
 | "These predictions can be tested against observations"    | "I check this against …"              |
 | "I also contribute TRINITY models to studies of"          | "I helped with …"                     |
 | any "X — Y — Z" list inside a sentence                    | a plain list, or three short sentences |
-| any wording that calls the town-picking random            | cut it, the author dislikes it        |
 
 ## Order of work
 
