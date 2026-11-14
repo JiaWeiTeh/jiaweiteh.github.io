@@ -20,16 +20,17 @@ nav { position: sticky; top: 0; z-index: 2; display: flow-root; margin: 0 -1.25r
       background: #fdfcf9; border-bottom: 1px solid #ece8df; }
 nav a { margin-right: 1.1rem; color: #5a5a5a; text-decoration: none; font-size: 0.95rem; }
 nav a:hover { color: #8a1c1c; }
+nav .home { margin-right: 1.6rem; font-weight: 600; color: inherit; }
 nav a[aria-current] { color: #8a1c1c; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1.5px; }
 .theme { float: right; width: 1.9rem; height: 1.9rem; margin-left: 0.6rem; font: 1rem/1 "Source Serif 4", Georgia, serif;
          color: #5a5a5a; background: none; border: 1px solid #d8d3c8; border-radius: 50%; cursor: pointer; }
 .back .theme { margin-top: -0.25rem; }
 
 header { display: flex; gap: 1.1rem; align-items: center; }
-header img { width: 88px; height: 88px; object-fit: cover; border-radius: 50%; flex: none; }
+header img { width: 150px; height: 150px; object-fit: cover; border-radius: 4px; flex: none; }
 h1 { font-size: 2.1rem; font-weight: 600; line-height: 1.15; margin: 0 0 0.25rem; }
 .subtitle { margin: 0 0 0.5rem; color: #5a5a5a; font-style: italic; }
-header .subtitle { margin: 0; }
+header .subtitle { margin: 0 0 0.6rem; }
 .lede { font-size: 1.2rem; line-height: 1.55; margin: 2rem 0 1rem; }
 .links { margin: 0; color: #5a5a5a; }
 .lead-fig { margin: 2.75rem 0 1rem; }
@@ -66,6 +67,7 @@ figcaption { margin-top: 0.4rem; color: #444; font-size: 0.9rem; }
 .map { display: block; width: 100%; aspect-ratio: 4 / 3; min-height: 300px; border: 1px solid #e3e6ea; border-radius: 8px; }
 
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.9rem; margin-top: 1rem; }
+.tiles.three { grid-template-columns: repeat(3, 1fr); margin-top: 1.75rem; }
 .tile { display: flex; flex-direction: column; border: 1px solid #e3e6ea; border-radius: 4px; overflow: hidden;
         background: #fff; color: inherit; text-decoration: none; transition: box-shadow 0.15s ease, transform 0.15s ease; }
 a.tile:hover { box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); transform: translateY(-2px); }
@@ -74,6 +76,7 @@ a.tile:focus-visible { outline: 2px solid #8a1c1c; outline-offset: 2px; }
 .tile .placeholder { display: grid; place-items: center; }
 .tile.feature { flex-direction: row; margin-bottom: 1.75rem; }
 .tile.feature > a { flex: 0 0 38%; }
+h1 + .feature { margin-top: 1.5rem; }
 .feature-body { padding: 0.9rem 1.1rem; }
 .feature-body .tile-title { display: block; padding: 0 0 0.3rem; font-size: 1.1rem; }
 .feature-body p { margin: 0 0 0.6rem; font-size: 0.95rem; }
@@ -100,7 +103,9 @@ body[data-vision=grey] article figure img { filter: url(#cvd-grey); }
 /* Dark theme, switched by site.js */
 :root[data-theme=dark] body { color: #e6e1d6; background: #1b1a17; }
 :root[data-theme=dark] a { color: #e4907f; }
-:root[data-theme=dark] :is(nav a, .subtitle, .links, footer, .meta, .tile-text, .tile-title .year, .theme, .vision, .vision button) { color: #a9a396; }
+:root[data-theme=dark] nav a { color: #a9a396; }
+:root[data-theme=dark] nav .home { color: inherit; }
+:root[data-theme=dark] :is(.subtitle, .links, footer, .meta, .tile-text, .tile-title .year, .theme, .vision, .vision button) { color: #a9a396; }
 :root[data-theme=dark] :is(nav a:hover, nav a[aria-current]) { color: #e4907f; }
 :root[data-theme=dark] :is(nav, .vision) { background: #1b1a17; border-bottom-color: #2e2b26; }
 :root[data-theme=dark] :is(.theme, .vision button) { border-color: #3d3a34; }
@@ -121,10 +126,14 @@ body[data-vision=grey] article figure img { filter: url(#cvd-grey); }
 
 @media (max-width: 600px) {
   body { margin: 1.5rem auto; }
-  nav { position: static; margin-bottom: 2rem; }   /* wraps to three lines on a phone: too tall to stick */
+  nav { position: static; margin-bottom: 2rem; }   /* wraps to two lines on a phone: too tall to stick */
   .vision { white-space: nowrap; overflow-x: auto; }   /* one scrollable line, so the sticky bar stays short */
-  header { gap: 0.9rem; }
-  header img { width: 64px; height: 64px; }
+  header { flex-direction: column; align-items: flex-start; gap: 0.9rem; }
+  header img { width: 120px; height: 120px; }
+  /* the three home tiles become rows: picture left, text right */
+  .tiles.three { grid-template-columns: 1fr; }
+  .tiles.three .tile { display: grid; grid-template-columns: 6rem 1fr; grid-template-rows: auto 1fr; }
+  .tiles.three .tile img { grid-row: span 2; }
   h1 { font-size: 1.7rem; }
   .lede { font-size: 1.08rem; }
 }

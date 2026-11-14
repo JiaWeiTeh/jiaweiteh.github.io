@@ -7,7 +7,7 @@ try { saved = localStorage.getItem("theme"); } catch (e) {}   // storage can be 
 root.dataset.theme = saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
 addEventListener("DOMContentLoaded", () => {
-  // Light/dark switch, in the menu on the home page and beside the back link elsewhere.
+  // Light/dark switch, in the menu, or beside the back link on route and post pages.
   const btn = document.createElement("button");
   btn.type = "button";
   btn.className = "theme";
@@ -24,12 +24,4 @@ addEventListener("DOMContentLoaded", () => {
   };
   paint();
   (document.querySelector("nav") || document.querySelector(".back"))?.prepend(btn);
-
-  // Menu: mark the section currently on screen.
-  const links = [...document.querySelectorAll('nav a[href^="#"]')];
-  const io = new IntersectionObserver(entries => entries.forEach(e => {
-    if (!e.isIntersecting) return;
-    links.forEach(l => l.hash === "#" + e.target.id ? l.setAttribute("aria-current", "true") : l.removeAttribute("aria-current"));
-  }), { rootMargin: "-20% 0px -70% 0px" });
-  links.forEach(l => { const s = document.getElementById(l.hash.slice(1)); if (s) io.observe(s); });
 });

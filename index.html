@@ -5,256 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jia Wei Teh</title>
   <meta name="description" content="Jia Wei Teh — PhD candidate in astrophysics at Universität Heidelberg, working on stellar feedback and the evolution of bubbles in molecular clouds. Lead developer of the TRINITY code.">
-  <link rel="stylesheet" href="style.css?v=2026-10-19">
+  <link rel="stylesheet" href="style.css?v=2026-11-14">
   <script src="site.js"></script>
 </head>
 <body>
 
 <nav>
-  <a href="#about">About</a>
-  <a href="#research">Research</a>
-  <a href="#software">Software</a>
-  <a href="#publications">Publications</a>
-  <a href="#outside">Outside research</a>
+  <a class="home" href="./" aria-current="page">Jia Wei Teh</a>
+  <a href="research/">Research</a>
+  <a href="papers/">Papers</a>
+  <a href="code/">Code</a>
+  <a href="routes/">Routes</a>
   <a href="blog/">Blog</a>
 </nav>
 
 <header>
-  <img src="photo.jpg" alt="Jia Wei Teh" width="88" height="88">
+  <img src="photo.jpg" alt="Jia Wei Teh" width="150" height="150">
   <div>
     <h1>Jia Wei Teh</h1>
     <p class="subtitle">PhD candidate in astrophysics, Universität Heidelberg</p>
+    <p class="links">
+      <a href="cv.pdf">CV</a> ·
+      <a href="https://github.com/JiaWeiTeh">GitHub</a> ·
+      <a href="https://ui.adsabs.harvard.edu/public-libraries/JlaSriSETtWLLkAxVonALA">ADS</a> ·
+      <a href="https://orcid.org/0000-0001-7863-5047">ORCID</a> ·
+      <a href="https://www.linkedin.com/in/jiaweiteh">LinkedIn</a> ·
+      jiaweiteh.astro (at) gmail.com
+    </p>
   </div>
 </header>
 
-<p class="lede">
-  Hello! I am interested in the galactic baryon cycle, focusing on how young stars disperse their
-  <a class="peek" href="https://www.eso.org/public/images/eso1701-compa/" target="_blank">natal molecular clouds<span aria-hidden="true"><img src="https://cdn.eso.org/images/screen/eso1701-compa.jpg" alt="" width="1280" height="746" loading="lazy">The Orion A molecular cloud in the infrared. Credit: ESO/VISION survey</span></a> and redistribute gas into the
-  surrounding interstellar medium. To do so, I develop
-  <a href="https://jiaweiteh.github.io/trinity-web/">TRINITY</a>, a code that models the evolution of
-  <a href="https://www.eso.org/public/images/eso0840a/" target="_blank">interstellar bubbles</a> under the influence of important
-  stellar feedback processes (stellar winds, photoionised gas and radiation). I also work with
-  observations from the <a href="https://phangs.org/" target="_blank">PHANGS</a> and
-  <a href="https://www.sdss.org/dr20/lvm/about/" target="_blank">SDSS&#8209;V Local Volume Mapper</a>
-  surveys to test these models against real star&#8209;forming regions.
-</p>
-<p class="links">
-  <a href="cv.pdf">CV</a> ·
-  <a href="https://github.com/JiaWeiTeh">GitHub</a> ·
-  <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0001-7863-5047&amp;sort=date%20desc">ADS</a> ·
-  <a href="https://orcid.org/0000-0001-7863-5047">ORCID</a> ·
-  <a href="https://www.linkedin.com/in/jiaweiteh">LinkedIn</a> ·
-  jiaweiteh.astro (at) gmail.com
-</p>
-
-<figure class="lead-fig">
-  <a href="research/trinity-fig1.png"><img src="research/trinity-fig1.png" alt="Schematic of a feedback bubble: the energy-driven phase, the momentum-driven phase with the cloud, neutral and ionised shell, winds and hot bubble labelled, and the two outcomes, collapse or dispersal" width="1186" height="348"></a>
-  <figcaption>
-    <b>How TRINITY works.</b> Winds from a young star cluster inflate a hot bubble and sweep the
-    surrounding gas into a shell. Depending on the properties of the cloud and the stars inside it,
-    the shell may expand far enough to disperse the cloud, or stall and collapse again. Adapted from
-    Figure 1 of <a href="https://arxiv.org/abs/2605.27517">Teh et al. (2026)</a>.
-  </figcaption>
-</figure>
-
 <section id="about">
-  <h2>About</h2>
+  <h2>About me</h2>
   <p>
     I am a PhD candidate at the Institut für Theoretische Astrophysik, Heidelberg University, where
-    I work with Ralf Klessen, Simon Glover and Kathryn Kreckel. I am also part of the International
-    Max Planck Research School for Astronomy and Cosmic Physics, and a member of the PHANGS and
-    SDSS-V/LVM collaborations and the ECOGAL ERC Synergy consortium. Before coming to Heidelberg, I
-    studied astronomy and astrophysics at the Australian National University and graduated with
-    first-class honours. I also did summer research projects at CSIRO, Leiden Observatory and
-    Swinburne University of Technology.
-  </p>
-</section>
-
-<section id="research">
-  <h2>Research</h2>
-
-  <h3>Feedback-driven bubbles in molecular clouds</h3>
-  <p>
-    Molecular clouds in nearby galaxies are cleared within a few million years of forming
-    their first massive stars, before any of those stars explode as supernovae. TRINITY
-    follows the pre-supernova feedback channels together — stellar winds, direct and
-    dust-reprocessed radiation pressure, and the pressure of photoionised gas — by
-    integrating the equation of motion of a single swept-up shell from the first winds to
-    the shell's fate: dispersal of the cloud, or stalling and re-collapse. It succeeds
-    WARPFIELD, keeping that code's speed while adding photoionised-gas pressure as an
-    explicit driver and a choice of cloud density profile. <a href="https://arxiv.org/abs/2605.27517" target="_blank">Paper I</a> presents the model and
-    its validation; I am now using it to survey cloud mass, density, star-formation
-    efficiency and metallicity.
-  </p>
-
-  <h3>Confronting the model with resolved observations</h3>
-  <p>
-    TRINITY predicts how bubbles grow and expand, which feedback processes drive them, and how many
-    ionising photons escape their H&nbsp;II regions. These predictions can be tested against
-    observations of nearby star-forming regions.
+    I have worked with Ralf Klessen, Simon Glover and Kathryn Kreckel since 2022. I am also part of
+    the International Max Planck Research School for Astronomy and Cosmic Physics, and a member of
+    the PHANGS and SDSS-V/LVM collaborations and the ECOGAL ERC Synergy consortium.
   </p>
   <p>
-    I am currently using spectroscopy from the SDSS-V Local Volume Mapper to study the Rosette
-    Nebula and investigate how its central star cluster has shaped the surrounding gas. I also
-    contribute TRINITY models to studies of
-    <a href="https://ui.adsabs.harvard.edu/abs/arXiv:2609.16190/abstract" target="_blank">a young bubble
-    in the central starburst of NGC&nbsp;253</a>, observed with JWST, and of
-    <a href="https://ui.adsabs.harvard.edu/abs/2026A%26A...711A..85S/abstract" target="_blank">neutral
-    atomic hydrogen around the Orion Nebula</a>.
+    Before my PhD, I studied astronomy and astrophysics at the Australian National University
+    (Canberra, Australia), and graduated with first-class honours in 2021. As an undergraduate, I did
+    summer research projects at CSIRO, Leiden Observatory and Swinburne University of Technology.
   </p>
-
-  <h3>Escape of ionising photons from H&nbsp;II regions</h3>
-  <p>
-    Before working on TRINITY, I studied how many ionising photons escape from H&nbsp;II regions. In
-    <a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.524.1191T/abstract" target="_blank">my first
-    paper</a>, I combined LEGUS star-cluster catalogues with SIGNALS spectroscopy of NGC&nbsp;628 to
-    constrain the escape fraction of Lyman-continuum photons from individual regions. I later
-    contributed to <a href="https://ui.adsabs.harvard.edu/abs/2026A%26A...708A.202S/abstract" target="_blank">a PHANGS study of the stellar associations
-    powering H&nbsp;II regions</a> and the escape of their ionising radiation.
-  </p>
-</section>
-
-<section id="software">
-  <h2>Software</h2>
-  <div class="tile feature">
-    <a href="https://jiaweiteh.github.io/trinity-web/"><img src="projects/trinity.png" alt="TRINITY: simulating stellar feedback in molecular clouds" width="480" height="480"></a>
-    <div class="feature-body">
-      <span class="tile-title">TRINITY</span>
-      <p>
-        TRINITY is a one-dimensional code for modelling how stellar feedback drives expanding bubbles
-        inside molecular clouds. Given a cloud's mass, density profile, star-formation efficiency and
-        surrounding conditions, it follows the radius, velocity, thermal state and forces acting on
-        the expanding shell. It can model whether the cloud is dispersed or the shell stalls and
-        eventually collapses again.
-      </p>
-      <p>Written in Python and released under GPL v3.</p>
-      <p>
-        <a href="https://github.com/JiaWeiTeh/trinity">Source code</a> ·
-        <a href="https://jiaweiteh.github.io/trinity-web/">Documentation</a>
-      </p>
-    </div>
-  </div>
-
-  <div class="tile feature">
-    <a href="https://github.com/JiaWeiTeh/simplify"><img src="projects/astrosimplify.gif" alt="Animation: a bubble temperature profile rebuilt from more and more points" width="552" height="552" loading="lazy"></a>
-    <div class="feature-body">
-      <span class="tile-title">astrosimplify</span>
-      <p>
-        astrosimplify reduces the number of points in one&#8209;dimensional data without losing important
-        features, such as sharp transitions, peaks and troughs. I made it for working with
-        astrophysical profiles, including radial density and temperature distributions, stellar
-        tracks and spectra. It only requires NumPy and is released under the MIT licence.
-      </p>
-      <p>
-        <a href="https://github.com/JiaWeiTeh/simplify">Source code</a> ·
-        <a href="https://pypi.org/project/astrosimplify/">PyPI</a>
-      </p>
-    </div>
-  </div>
-</section>
-
-<section id="publications">
-  <h2>Publications</h2>
-  <p>
-    Full list on <a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0001-7863-5047&amp;sort=date%20desc">ADS</a>.
-  </p>
-
-  <h3>First author</h3>
-  <ol class="pubs" reversed>
-    <li>
-      <strong>Teh, J. W.</strong>, Klessen, R. S., Glover, S. C. O., Kreckel, K. (2026),
-      <em>TRINITY: A coupled model of winds, radiation, and photoionised gas in molecular
-      clouds. I. Methods and validation</em>, Astronomy &amp; Astrophysics, 714, A226.
-      <a href="https://doi.org/10.1051/0004-6361/202661074">DOI</a> ·
-      <a href="https://arxiv.org/abs/2605.27517">arXiv:2605.27517</a> ·
-      <a href="https://ui.adsabs.harvard.edu/abs/arXiv:2605.27517/abstract">ADS</a>
-    </li>
-    <li>
-      <strong>Teh, J. W.</strong>, Grasha, K., Krumholz, M. R., Battisti, A. J., Calzetti, D.,
-      Rousseau-Nepton, L., et al. (2023),
-      <em>Constraining the LyC escape fraction from LEGUS star clusters with SIGNALS H&nbsp;II
-      region observations: A pilot study of NGC&nbsp;628</em>, MNRAS, 524, 1191.
-      <a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.524.1191T/abstract">ADS</a> ·
-      <a href="https://github.com/JiaWeiTeh/LEGUS-SIGNALS-NGC628">Code</a>
-    </li>
-  </ol>
-
-  <h3>Co-author</h3>
-  <ol class="pubs" reversed>
-    <li>
-      Sheriff, K. E., Mills, E. A. C., Mai, X., Siwakoti, U., Duval, S. E., Bolatto, A. D.,
-      Levy, R. C., <strong>Teh, J. W.</strong>, et al. (2026),
-      <em>JWST Observations of Starbursts: A Young Bubble in NGC&nbsp;253's Central
-      Starburst</em>, AJ, in press.
-      <a href="https://ui.adsabs.harvard.edu/abs/arXiv:2609.16190/abstract">ADS</a>
-    </li>
-    <li>
-      Soler, J. D., Beuther, H., Glover, S. C. O., Klessen, R. S., Ott, J., Rugel, M.,
-      <strong>Teh, J. W.</strong>, et al. (2026),
-      <em>The Neutral Atomic Hydrogen in the solar neighbourhood (NeAtHood) project: I. Ghost
-      in the shell: neutral atomic hydrogen in the extended Orion nebula</em>,
-      A&amp;A, 711, A85.
-      <a href="https://ui.adsabs.harvard.edu/abs/2026A%26A...711A..85S/abstract">ADS</a>
-    </li>
-    <li>
-      Scheuermann, F., Kreckel, K., <strong>Teh, J. W.</strong>, Belfiore, F., Groves, B.,
-      Barnes, A. T., et al. (2026),
-      <em>Stellar associations powering H&nbsp;II regions: II. Escape fraction of ionising
-      photons</em>, A&amp;A, 708, A202.
-      <a href="https://ui.adsabs.harvard.edu/abs/2026A%26A...708A.202S/abstract">ADS</a>
-    </li>
-    <li>
-      Polak, B., Mac Low, M.-M., Klessen, R. S., <strong>Teh, J. W.</strong>,
-      Cournoyer-Cloutier, C., Andersson, E. P., Appel, S. M., et al. (2024),
-      <em>Massive star cluster formation: I. High star formation efficiency while resolving
-      feedback of individual stars</em>, A&amp;A, 690, A94.
-      <a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...690A..94P/abstract">ADS</a>
-    </li>
-    <li>
-      Maconi, E., Soler, J. D., Reissl, S., Girichidis, P., Klessen, R. S., Hennebelle, P.,
-      Molinari, S., Testi, L., Smith, R. J., Sormani, M. C., <strong>Teh, J. W.</strong> (2023),
-      <em>Modelling Local Bubble analogs: synthetic dust polarization maps</em>,
-      MNRAS, 523, 5995.
-      <a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.523.5995M/abstract">ADS</a>
-    </li>
-  </ol>
-
-</section>
-
-<section id="outside">
-  <h2>Outside research</h2>
-  <h3>Side projects</h3>
-  <p>Small things I wrote while teaching myself Python, 2022–2023.</p>
-  <div class="tiles">
-    <a class="tile" href="https://github.com/JiaWeiTeh/gpx_vis">
-      <img src="projects/gpx_vis.jpg" alt="A cycling track on a dark map, coloured by elevation" width="480" height="480" loading="lazy">
-      <span class="tile-title">gpx_vis <span class="year">2023</span></span>
-      <span class="tile-text">Turns GPX tracks into interactive elevation maps</span>
-    </a>
-    <a class="tile" href="https://github.com/JiaWeiTeh/gelato">
-      <span class="tile-img tile-type" aria-hidden="true"><span class="der">der</span><span class="die">die</span><span class="das">das</span></span>
-      <span class="tile-title">GELATO <span class="year">2022</span></span>
-      <span class="tile-text">A terminal quiz for German articles and verbs</span>
-    </a>
-    <a class="tile" href="https://github.com/JiaWeiTeh/ballgame">
-      <img class="contain" src="projects/ballgame.gif" alt="Self-playing Pong screensaver" width="768" height="396" loading="lazy">
-      <span class="tile-title">BallGame <span class="year">2022</span></span>
-      <span class="tile-text">A self-playing Pong screensaver, in matplotlib</span>
-    </a>
-    <a class="tile" href="https://github.com/JiaWeiTeh/BounceGame">
-      <img src="projects/bouncegame.gif" alt="A ball bouncing inside a circular wall" width="320" height="320" loading="lazy">
-      <span class="tile-title">BounceGame <span class="year">2022</span></span>
-      <span class="tile-text">A ball bouncing in a circle under gravity and drag, in matplotlib</span>
-    </a>
-  </div>
-
-  <h3>Hobbies</h3>
   <p>
     Outside astronomy, I like hiking, taking photos, bouldering and playing the piano. I also enjoy
-    picking a town more or less at random on a map and cycling there. And I probably spend more time
-    than necessary thinking about colours in scientific figures.
+    picking random towns in Germany and cycling there.
   </p>
-  <div class="tiles">
+  <div class="tiles three">
+    <a class="tile" href="research/">
+      <img src="projects/trinity.png" alt="TRINITY: simulating stellar feedback in molecular clouds" width="480" height="480">
+      <span class="tile-title">TRINITY</span>
+      <span class="tile-text">Simulating stellar feedback in molecular clouds</span>
+    </a>
     <a class="tile" href="routes/">
       <img src="routes/tile.jpg" alt="A ridge of the Malvern Hills rising out of a sea of fog, walkers on the path" width="480" height="480">
       <span class="tile-title">Routes</span>
@@ -291,7 +94,7 @@
 </section>
 
 <footer>
-  Last updated October 2026.
+  Last updated November 2026.
 </footer>
 
 </body>
