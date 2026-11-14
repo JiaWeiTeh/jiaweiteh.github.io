@@ -3,6 +3,20 @@
 Written 2026-10-31 after reviewing the site as rendered (desktop, phone, dark mode, Routes, Blog).
 This is a plan for the next session to implement. Delete this file when the redesign is done.
 
+## Status (2026-11-14)
+
+Done:
+- Split into pages instead of one long page: home, `research/`, `papers/`, `code/`, plus the
+  existing `routes/` and `blog/`. The menu works as tabs; each page marks itself `aria-current`.
+- Home: larger square photo, links row beside it, an "About me" paragraph in the shape of a template
+  the author supplied (facts from `cv.pdf`), the hobbies paragraph, and three tiles
+  (TRINITY, Routes, Colour). The bubble schematic and old lede moved to `research/`.
+- ADS links point to the author's public ADS library.
+- "In Preparation" removed from `cv.pdf`. If a LaTeX source exists elsewhere, remove it there too.
+
+Still open from the plan below: Research and Code text in plainer words (author writes it),
+compact co-author entries, contact without street address, tile hover lift.
+
 ## Verdict
 
 The *look* is not the problem. Source Serif, the warm off-white, the dark-red links, dark mode,
