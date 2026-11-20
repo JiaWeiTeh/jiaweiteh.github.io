@@ -1,0 +1,23 @@
+/* Route map pages (routes/<slug>/map.html): the map fills the window, the elevation strip sits under it. */
+@font-face { font-family: "Source Serif 4"; src: url(../fonts/source-serif-4-latin-400-normal.woff2) format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+
+/* Same colours as style.css; site.js sets data-theme. */
+:root { --bg: #fdfcf9; --muted: #5a5a5a; --link: #8a1c1c; --line: #ece8df; }
+:root[data-theme=dark] { --bg: #1b1a17; --muted: #a9a396; --link: #e4907f; --line: #2e2b26; }
+
+html, body { height: 100%; margin: 0; }
+body { display: flex; flex-direction: column; background: var(--bg); }
+#map { flex: 1; min-height: 0; }
+
+#profile {
+  position: relative; box-sizing: border-box; height: 5.5rem; padding: 0.6rem 1.8rem 1.4rem 3.6rem;
+  font: 0.8rem/1 "Source Serif 4", Georgia, serif; color: var(--muted); border-top: 1px solid var(--line);
+}
+#profile[hidden] { display: none; }
+#profile svg { display: block; width: 100%; height: 100%; overflow: visible; }
+#profile path { fill: none; stroke: var(--link); stroke-width: 1.5; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+#profile span { position: absolute; }
+#high { left: 0.8rem; top: 0.45rem; }
+#low { left: 0.8rem; bottom: 1.25rem; }
+#ticks { position: absolute; left: 3.6rem; right: 1.8rem; bottom: 1.1rem; }   /* as wide as the drawing */
+#ticks span { top: 0.3rem; transform: translateX(-50%); white-space: nowrap; }

@@ -1,0 +1,150 @@
+/* Source Serif 4, self-hosted (SIL OFL 1.1, see fonts/OFL.txt) */
+@font-face { font-family: "Source Serif 4"; src: url(fonts/source-serif-4-latin-400-normal.woff2) format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Source Serif 4"; src: url(fonts/source-serif-4-latin-400-italic.woff2) format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Source Serif 4"; src: url(fonts/source-serif-4-latin-600-normal.woff2) format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Source Serif 4"; src: url(fonts/source-serif-4-latin-600-italic.woff2) format("woff2"); font-weight: 600; font-style: italic; font-display: swap; }
+
+/* Colours. site.js sets data-theme on <html>; the dark block replaces the light values. */
+:root {
+  --bg: #fdfcf9;       /* page */
+  --text: #1e1e1e;
+  --muted: #5a5a5a;    /* menu, captions, small print */
+  --link: #8a1c1c;
+  --line: #ece8df;     /* rules and image edges */
+  --edge: #d8d3c8;     /* button outlines */
+  --panel: #f3f0e8;    /* take-home boxes, empty image space */
+  --blend: multiply;   /* figures with a white background sink into the page */
+}
+:root[data-theme=dark] {
+  --bg: #1b1a17;
+  --text: #e6e1d6;
+  --muted: #a9a396;
+  --link: #e4907f;
+  --line: #2e2b26;
+  --edge: #3d3a34;
+  --panel: #26241f;
+  --blend: normal;
+}
+
+html { font: 18px/1.6 "Source Serif 4", Georgia, serif; }
+body {
+  max-width: 43rem;
+  margin: 3rem auto;
+  padding: 0 1.25rem;
+  color: var(--text);
+  background: var(--bg);
+}
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+h1 { font-size: 2.1rem; font-weight: 600; line-height: 1.15; margin: 0 0 0.25rem; }
+h2 { font-size: 1.45rem; font-weight: 600; line-height: 1.3; margin: 3rem 0 0.75rem; }
+h3 { font-size: 1.05rem; font-weight: 600; font-style: italic; margin: 1.5rem 0 0.25rem; }
+p { margin: 0 0 1rem; }
+.subtitle { margin: 0 0 0.5rem; color: var(--muted); font-style: italic; }
+.lede { font-size: 1.2rem; line-height: 1.55; margin: 2rem 0 1rem; }
+.meta, figcaption, footer { color: var(--muted); font-size: 0.9rem; }
+footer { margin-top: 3rem; }
+
+/* Menu, the same on every page. site.js adds the light/dark button. */
+nav { display: flow-root; margin: 0 -1.25rem 3.25rem; padding: 0.6rem 1.25rem; border-bottom: 1px solid var(--line); }
+nav a { margin-right: 1.1rem; color: var(--muted); text-decoration: none; font-size: 0.95rem; }
+nav a:hover { color: var(--link); }
+nav .home { margin-right: 1.6rem; font-weight: 600; color: inherit; }
+nav a[aria-current] { color: var(--link); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1.5px; }
+.theme {
+  float: right; width: 1.9rem; height: 1.9rem; margin-left: 0.6rem;
+  font: 1rem/1 "Source Serif 4", Georgia, serif; color: var(--muted);
+  background: none; border: 1px solid var(--edge); border-radius: 50%; cursor: pointer;
+}
+
+/* Home: photo, name and links */
+header { display: flex; gap: 1.1rem; align-items: center; }
+header img { width: 150px; height: 150px; object-fit: cover; border-radius: 4px; flex: none; }
+header .subtitle { margin-bottom: 0.6rem; }
+.links { margin: 0; color: var(--muted); }
+:root[data-theme=dark] header img { filter: brightness(0.92); }
+
+/* Hover preview on a link in the home intro (wide screens with a mouse only) */
+.peek { position: relative; white-space: nowrap; }
+.peek > span {
+  display: none; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); z-index: 20;
+  width: 20rem; max-width: 80vw; padding: 0.4rem; white-space: normal;
+  color: var(--muted); font-size: 0.8rem; line-height: 1.4;
+  background: var(--bg); border: 1px solid var(--line); border-radius: 4px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+.peek > span img { display: block; width: 100%; height: auto; margin-bottom: 0.3rem; }
+@media (hover: hover) and (min-width: 700px) { .peek:is(:hover, :focus-visible) > span { display: block; } }
+
+/* Figures and photos */
+figure { margin: 1.5rem 0; }
+figure img { display: block; max-width: 100%; height: auto; margin: 0 auto; border-radius: 4px; mix-blend-mode: var(--blend); }
+figcaption { margin-top: 0.4rem; }
+.fig-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; align-items: center; }
+.fig-row.two { grid-template-columns: repeat(2, 1fr); }
+.fig-row img { width: 100%; }
+.photos { columns: 3 11rem; column-gap: 0.75rem; }
+.photos a { display: block; margin-bottom: 0.75rem; break-inside: avoid; }
+.photos img { display: block; width: 100%; height: auto; border-radius: 4px; }
+.map { display: block; width: 100%; aspect-ratio: 5 / 4; min-height: 340px; border: 1px solid var(--line); border-radius: 4px; }
+
+/* Lists */
+.pubs { padding-left: 1.5rem; }
+.pubs li { margin-bottom: 0.75rem; }
+.posts { list-style: none; padding: 0; }
+.posts li, .credits li { margin-bottom: 0.6rem; }
+
+/* Tiles: a square picture with a title and a line of text under it */
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 1.4rem 0.9rem; margin-top: 1rem; }
+.tiles.three { grid-template-columns: repeat(3, 1fr); margin-top: 1.75rem; }
+.tile { display: block; color: inherit; text-decoration: none; }
+.tile img, .tile-img {
+  display: block; box-sizing: border-box; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 4px;
+}
+.tile img.contain { object-fit: contain; background: #000; }
+.tile-title { display: block; margin-top: 0.5rem; font-weight: 600; line-height: 1.3; }
+.tile-text { display: block; margin-top: 0.15rem; color: var(--muted); font-size: 0.9rem; line-height: 1.4; }
+.year { margin-left: 0.3rem; color: var(--muted); font-size: 0.9rem; font-weight: 400; }
+a.tile:hover .tile-title { color: var(--link); }
+a.tile:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+.tile-type { display: grid; place-content: center; gap: 0.1rem; font-size: 1.7rem; font-weight: 700; line-height: 1.1; text-align: center; }
+.der { color: #0072b2; } .die { color: #d55e00; } .das { color: #009e73; }   /* Okabe-Ito: colour-blind safe */
+
+/* Code page: picture on the left, text on the right */
+.project { display: flex; gap: 1.4rem; align-items: flex-start; margin: 2rem 0 2.5rem; }
+.project > a { flex: 0 0 34%; }
+.project img { display: block; box-sizing: border-box; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 4px; }
+.project h2 { margin-top: 0; }
+
+/* Colour post */
+.formula { text-align: center; }
+.takehome { background: var(--panel); padding: 0.75rem 1rem; border-radius: 4px; font-weight: 600; }
+.vision {
+  position: sticky; top: 0; z-index: 2; margin: 1.2rem -1.25rem 0.5rem; padding: 0.5rem 1.25rem;
+  color: var(--muted); font-size: 0.9rem; background: var(--bg); border-bottom: 1px solid var(--line);
+}
+.vision button {
+  font: inherit; color: var(--muted); background: none; border: 1px solid var(--edge); border-radius: 999px;
+  padding: 0.1rem 0.65rem; margin: 0.15rem 0.1rem; cursor: pointer;
+}
+.vision button[aria-pressed=true] { color: var(--bg); background: var(--link); border-color: var(--link); }
+.cvd-filters { position: absolute; }
+body[data-vision=protan] article figure img { filter: url(#cvd-protan); }
+body[data-vision=deutan] article figure img { filter: url(#cvd-deutan); }
+body[data-vision=grey] article figure img { filter: url(#cvd-grey); }
+
+@media (max-width: 600px) {
+  body { margin: 1.5rem auto; }
+  nav { margin-bottom: 2rem; }
+  h1 { font-size: 1.7rem; }
+  .lede { font-size: 1.08rem; }
+  header { flex-direction: column; align-items: flex-start; gap: 0.9rem; }
+  header img { width: 120px; height: 120px; }
+  .vision { white-space: nowrap; overflow-x: auto; }   /* one scrollable line, so the sticky bar stays short */
+  /* the three home tiles become rows: picture left, text right */
+  .tiles.three { grid-template-columns: 1fr; gap: 0.9rem; }
+  .tiles.three .tile { display: grid; grid-template-columns: 6rem 1fr; grid-template-rows: auto 1fr; column-gap: 0.9rem; }
+  .tiles.three .tile img { grid-row: span 2; }
+  .project { flex-direction: column; gap: 0.9rem; }
+  .project > a { flex: none; width: 60%; }
+}

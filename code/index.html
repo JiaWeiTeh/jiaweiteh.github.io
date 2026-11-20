@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Code · Jia Wei Teh</title>
+  <meta name="description" content="Software by Jia Wei Teh: the TRINITY code, astrosimplify, and small side projects.">
+  <link rel="stylesheet" href="../style.css?v=2026-11-20">
+  <script src="../site.js"></script>
+</head>
+<body>
+
+<nav>
+  <a class="home" href="../">Jia Wei Teh</a>
+  <a href="../research/">Research</a>
+  <a href="../papers/">Papers</a>
+  <a href="../code/" aria-current="page">Code</a>
+  <a href="../routes/">Routes</a>
+  <a href="../blog/">Blog</a>
+</nav>
+
+<h1>Code</h1>
+
+<section class="project">
+  <a href="https://jiaweiteh.github.io/trinity-web/" target="_blank" rel="noopener noreferrer"><img src="../projects/trinity.png" alt="TRINITY: simulating stellar feedback in molecular clouds" width="480" height="480"></a>
+  <div>
+    <h2>TRINITY</h2>
+    <p>
+      TRINITY is a one-dimensional code for modelling how stellar feedback drives expanding bubbles
+      inside molecular clouds. Given a cloud's mass, density profile, star-formation efficiency and
+      surrounding conditions, it follows the radius, velocity, thermal state and forces acting on
+      the expanding shell. It can model whether the cloud is dispersed or the shell stalls and
+      eventually collapses again.
+    </p>
+    <p>Written in Python and released under GPL v3.</p>
+    <p>
+      <a href="https://github.com/JiaWeiTeh/trinity" target="_blank" rel="noopener noreferrer">Source code</a> ·
+      <a href="https://jiaweiteh.github.io/trinity-web/" target="_blank" rel="noopener noreferrer">Documentation</a>
+    </p>
+  </div>
+</section>
+
+<section class="project">
+  <a href="https://github.com/JiaWeiTeh/simplify" target="_blank" rel="noopener noreferrer"><img src="../projects/astrosimplify.gif" alt="Animation: a bubble temperature profile rebuilt from more and more points" width="552" height="552" loading="lazy"></a>
+  <div>
+    <h2>astrosimplify</h2>
+    <p>
+      astrosimplify reduces the number of points in one&#8209;dimensional data without losing important
+      features, such as sharp transitions, peaks and troughs. I made it for working with
+      astrophysical profiles, including radial density and temperature distributions, stellar
+      tracks and spectra. It only requires NumPy and is released under the MIT licence.
+    </p>
+    <p>
+      <a href="https://github.com/JiaWeiTeh/simplify" target="_blank" rel="noopener noreferrer">Source code</a> ·
+      <a href="https://pypi.org/project/astrosimplify/" target="_blank" rel="noopener noreferrer">PyPI</a>
+    </p>
+  </div>
+</section>
+
+<h2>Side projects</h2>
+<p>Small things I wrote while teaching myself Python, 2022–2023.</p>
+<div class="tiles">
+  <a class="tile" href="https://github.com/JiaWeiTeh/gpx_vis" target="_blank" rel="noopener noreferrer">
+    <img src="../projects/gpx_vis.jpg" alt="A cycling track on a dark map, coloured by elevation" width="480" height="480" loading="lazy">
+    <span class="tile-title">gpx_vis <span class="year">2023</span></span>
+    <span class="tile-text">Turns GPX tracks into interactive elevation maps</span>
+  </a>
+  <a class="tile" href="https://github.com/JiaWeiTeh/gelato" target="_blank" rel="noopener noreferrer">
+    <span class="tile-img tile-type" aria-hidden="true"><span class="der">der</span><span class="die">die</span><span class="das">das</span></span>
+    <span class="tile-title">GELATO <span class="year">2022</span></span>
+    <span class="tile-text">A terminal quiz for German articles and verbs</span>
+  </a>
+  <a class="tile" href="https://github.com/JiaWeiTeh/ballgame" target="_blank" rel="noopener noreferrer">
+    <img class="contain" src="../projects/ballgame.gif" alt="Self-playing Pong screensaver" width="768" height="396" loading="lazy">
+    <span class="tile-title">BallGame <span class="year">2022</span></span>
+    <span class="tile-text">A self-playing Pong screensaver, in matplotlib</span>
+  </a>
+  <a class="tile" href="https://github.com/JiaWeiTeh/BounceGame" target="_blank" rel="noopener noreferrer">
+    <img src="../projects/bouncegame.gif" alt="A ball bouncing inside a circular wall" width="320" height="320" loading="lazy">
+    <span class="tile-title">BounceGame <span class="year">2022</span></span>
+    <span class="tile-text">A ball bouncing in a circle under gravity and drag, in matplotlib</span>
+  </a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://tile.openstreetmap.org https://*.tile.opentopomap.org; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Route map · Jia Wei Teh</title>
+  <link rel="stylesheet" href="../leaflet/leaflet.css">
+  <link rel="stylesheet" href="../map.css">
+  <script src="../../site.js"></script>
+</head>
+<body>
+
+<div id="map"></div>
+
+<div id="profile" hidden>
+  <svg viewBox="0 0 1000 100" preserveAspectRatio="none" role="img" aria-label="Elevation along the route"><path d=""/></svg>
+  <span id="high"></span><span id="low"></span><div id="ticks"></div>
+</div>
+
+<script src="../leaflet/leaflet.js"></script>
+<script src="../map.js"></script>
+
+</body>
+</html>
