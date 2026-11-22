@@ -9,7 +9,7 @@
   --bg: #fdfcf9;       /* page */
   --text: #1e1e1e;
   --muted: #5a5a5a;    /* menu, captions, small print */
-  --link: #8a1c1c;
+  --link: #3270ae;     /* 4.5:1 on page, band and footer, 3.2:1 against the text */
   --line: #ece8df;     /* rules and image edges */
   --edge: #d8d3c8;     /* button outlines */
   --panel: #f3f0e8;    /* take-home boxes, empty image space, footer */
@@ -20,7 +20,7 @@
   --bg: #1b1a17;
   --text: #e6e1d6;
   --muted: #a9a396;
-  --link: #e4907f;
+  --link: #6190d1;     /* 4.5:1 on page, band and footer; only 2.5:1 against the text, so the underline on hover and focus matters here */
   --line: #2e2b26;
   --edge: #3d3a34;
   --panel: #26241f;
@@ -30,13 +30,16 @@
 
 html { font: 18px/1.6 "Source Serif 4", Georgia, serif; }
 body {
-  max-width: 43rem;
+  max-width: 36rem;    /* about 75 characters a line */
   margin: 3rem auto;
   padding: 0 1.25rem;
   color: var(--text);
   background: var(--bg);
 }
-a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+/* Links are blue without an underline; the underline marks the one under the pointer or keyboard focus.
+   :where keeps this rule weaker than the menu's and the tiles' own. */
+a { color: var(--link); text-decoration: none; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:where(:hover, :focus-visible) { text-decoration-line: underline; }
 
 h1 { font-size: 2.1rem; font-weight: 600; line-height: 1.15; margin: 0 0 0.25rem; }
 h2 { font-size: 1.45rem; font-weight: 600; line-height: 1.3; margin: 3rem 0 0.75rem; }
@@ -103,14 +106,15 @@ figcaption { margin-top: 0.4rem; }
 .map { display: block; width: 100%; aspect-ratio: 5 / 4; min-height: 340px; border: 1px solid var(--line); border-radius: 4px; }
 
 /* Lists */
-.pubs { padding-left: 1.5rem; }
-.pubs li { margin-bottom: 0.75rem; }
+.pubs { list-style: none; padding-left: 0; }
+.pubs li { margin-bottom: 0.75rem; padding-left: 1.5rem; text-indent: -1.5rem; }   /* hanging indent, as in a reference list */
 .posts { list-style: none; padding: 0; }
 .posts li, .credits li { margin-bottom: 0.6rem; }
 
 /* Tiles: a square picture with a title and a line of text under it */
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 1.4rem 0.9rem; margin-top: 1rem; }
 .tiles.three { grid-template-columns: repeat(3, 1fr); margin-top: 1.75rem; }
+.tiles.four { grid-template-columns: repeat(4, 1fr); }
 .tile { display: block; color: inherit; text-decoration: none; }
 .tile img, .tile-img {
   display: block; box-sizing: border-box; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover;
@@ -127,7 +131,7 @@ a.tile:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
 
 /* Code page: picture on the left, text on the right */
 .project { display: flex; gap: 1.4rem; align-items: flex-start; margin: 2rem 0 2.5rem; }
-.project > a { flex: 0 0 34%; }
+.project > a { flex: 0 0 42%; }
 .project img { display: block; box-sizing: border-box; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 4px; }
 .project h2 { margin-top: 0; }
 
@@ -151,6 +155,10 @@ body[data-vision=grey] article figure img { filter: url(#cvd-grey); }
 @media (max-width: 600px) {
   body { margin: 1.5rem auto; }
   .band { padding: 1.75rem 0 1.5rem; }
+  nav .home { display: block; margin: 0 0 0.3rem; line-height: 1.9rem; }   /* the name on its own line, as tall as the theme button, the six links on the next */
+  nav a { margin-right: 0.4rem; font-size: 0.85rem; }   /* the six links fit one line from 360px up */
+  nav a:last-child { margin-right: 0; }
+  .tiles.four { grid-template-columns: repeat(2, 1fr); }
   h1 { font-size: 1.7rem; }
   .lede { font-size: 1.08rem; }
   header { flex-direction: column; align-items: flex-start; gap: 0.9rem; }
