@@ -103,9 +103,7 @@ figcaption { margin-top: 0.4rem; }
 /* Tiles: a square picture with a title and a line of text under it */
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 1.4rem 0.9rem; margin-top: 1rem; }
 .tiles.three { grid-template-columns: repeat(3, 1fr); margin-top: 1.75rem; }
-.tiles.four { grid-template-columns: repeat(4, 1fr); }
-.tiles + .meta { margin-top: 1.75rem; }   /* a note under a grid of tiles */
-.tile { display: block; color: inherit; text-decoration: none; }
+.tiles.four { grid-template-columns: repeat(4, 1fr); }.tile { display: block; color: inherit; text-decoration: none; }
 .tile img, .tile-img {
   display: block; box-sizing: border-box; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover;
   background: var(--panel); border: 1px solid var(--line); border-radius: 4px;
